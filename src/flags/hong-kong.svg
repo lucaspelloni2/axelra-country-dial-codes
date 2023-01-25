@@ -1,7 +1,7 @@
 
-<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+
+<svg  x="0px" y="0px"
+	 viewBox="0 0 512 512"  >
 <circle style="fill:#D80027;" cx="256" cy="256" r="256"/>
 <g>
 	<path style="fill:#F0F0F0;" d="M282.43,193.668c-5.818,24.199-16.155,19.584-21.228,40.688
@@ -16,35 +16,7 @@
 		c11.753,28.399-1.743,60.95-30.142,72.704C290.477,339.306,279.768,342.535,271.254,321.965z"/>
 	<path style="fill:#F0F0F0;" d="M323.45,261.876c-24.813,1.947-23.622-9.313-45.257-7.615c-2.403-30.639,20.491-57.43,51.132-59.835
 		c30.64-2.399,57.43,20.493,59.832,51.135C345.88,248.954,345.641,260.137,323.45,261.876z"/>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
+
+
 </g>
 </svg>
