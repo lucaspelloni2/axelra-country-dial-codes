@@ -1,0 +1,11 @@
+{
+  "name": "axelra-country-dial-codes",
+  "version": "1.0.0",
+  "description": "axelra country dial codes.",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lucas pelloni",
+  "license": "ISC"
+}
