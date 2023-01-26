@@ -12,11 +12,14 @@ const toPrint = rawCountries.map((c) => {
     iso2: c[2],
     dial: c[3],
     flag: flagXML.toString("utf-8"),
+    format: c[4]?.toString().length > 1 ? c[4] : null,
   };
 });
 
 const string = toPrint.map((value, i) => {
-  const row = `{name: "${value.name}", iso2: "${value.iso2}", dial: ${value.dial}, flag: \`${value.flag}\`}`;
+  const row = `{name: "${value.name}", iso2: "${value.iso2}", dial: ${
+    value.dial
+  }, format: "${value.format ?? ""}", flag: \`${value.flag}\`}`;
   return i === toPrint.length - 1 ? `${row}\n` : `${row},\n`;
 });
 

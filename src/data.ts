@@ -1,4 +1,10 @@
-export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, flag: `
+export const countriesWithDial = [
+  {
+    name: "Afghanistan",
+    iso2: "af",
+    dial: 93,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -16,8 +22,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Albania", iso2: "al", dial: 355, flag: `
+`,
+  },
+  {
+    name: "Albania",
+    iso2: "al",
+    dial: 355,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -33,8 +45,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Algeria", iso2: "dz", dial: 213, flag: `
+`,
+  },
+  {
+    name: "Algeria",
+    iso2: "dz",
+    dial: 213,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -50,8 +68,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Andorra", iso2: "ad", dial: 376, flag: `
+`,
+  },
+  {
+    name: "Andorra",
+    iso2: "ad",
+    dial: 376,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -75,8 +99,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Angola", iso2: "ao", dial: 244, flag: `
+`,
+  },
+  {
+    name: "Angola",
+    iso2: "ao",
+    dial: 244,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -96,8 +126,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Antigua and Barbuda", iso2: "ag", dial: 1268, flag: `
+`,
+  },
+  {
+    name: "Antigua and Barbuda",
+    iso2: "ag",
+    dial: 1268,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -114,8 +150,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Argentina", iso2: "ar", dial: 54, flag: `
+`,
+  },
+  {
+    name: "Argentina",
+    iso2: "ar",
+    dial: 54,
+    format: "(..) ........",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -131,8 +173,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Armenia", iso2: "am", dial: 374, flag: `
+`,
+  },
+  {
+    name: "Armenia",
+    iso2: "am",
+    dial: 374,
+    format: ".. ......",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -144,8 +192,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Aruba", iso2: "aw", dial: 297, flag: `
+`,
+  },
+  {
+    name: "Aruba",
+    iso2: "aw",
+    dial: 297,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -165,8 +219,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Australia", iso2: "au", dial: 61, flag: `
+`,
+  },
+  {
+    name: "Australia",
+    iso2: "au",
+    dial: 61,
+    format: "(..) .... ....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -204,8 +264,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Austria", iso2: "at", dial: 43, flag: `
+`,
+  },
+  {
+    name: "Austria",
+    iso2: "at",
+    dial: 43,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -218,8 +284,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Azerbaijan", iso2: "az", dial: 994, flag: `
+`,
+  },
+  {
+    name: "Azerbaijan",
+    iso2: "az",
+    dial: 994,
+    format: "(..) ... .. ..",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -238,8 +310,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Bahamas", iso2: "bs", dial: 1242, flag: `
+`,
+  },
+  {
+    name: "Bahamas",
+    iso2: "bs",
+    dial: 1242,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -255,8 +333,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Bahrain", iso2: "bh", dial: 973, flag: `
+`,
+  },
+  {
+    name: "Bahrain",
+    iso2: "bh",
+    dial: 973,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -268,8 +352,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Bangladesh", iso2: "bd", dial: 880, flag: `
+`,
+  },
+  {
+    name: "Bangladesh",
+    iso2: "bd",
+    dial: 880,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -279,8 +369,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Barbados", iso2: "bb", dial: 1246, flag: `
+`,
+  },
+  {
+    name: "Barbados",
+    iso2: "bb",
+    dial: 1246,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -298,8 +394,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Belarus", iso2: "by", dial: 375, flag: `
+`,
+  },
+  {
+    name: "Belarus",
+    iso2: "by",
+    dial: 375,
+    format: "(..) ... .. ..",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -322,8 +424,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Belgium", iso2: "be", dial: 32, flag: `
+`,
+  },
+  {
+    name: "Belgium",
+    iso2: "be",
+    dial: 32,
+    format: "... .. .. ..",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -335,8 +443,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Belize", iso2: "bz", dial: 501, flag: `
+`,
+  },
+  {
+    name: "Belize",
+    iso2: "bz",
+    dial: 501,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -358,8 +472,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Benin", iso2: "bj", dial: 229, flag: `
+`,
+  },
+  {
+    name: "Benin",
+    iso2: "bj",
+    dial: 229,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -371,8 +491,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Bhutan", iso2: "bt", dial: 975, flag: `
+`,
+  },
+  {
+    name: "Bhutan",
+    iso2: "bt",
+    dial: 975,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -395,8 +521,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Bolivia", iso2: "bo", dial: 591, flag: `
+`,
+  },
+  {
+    name: "Bolivia",
+    iso2: "bo",
+    dial: 591,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -408,8 +540,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Bosnia and Herzegovina", iso2: "ba", dial: 387, flag: `
+`,
+  },
+  {
+    name: "Bosnia and Herzegovina",
+    iso2: "ba",
+    dial: 387,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -432,8 +570,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Botswana", iso2: "bw", dial: 267, flag: `
+`,
+  },
+  {
+    name: "Botswana",
+    iso2: "bw",
+    dial: 267,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -451,8 +595,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Brazil", iso2: "br", dial: 55, flag: `
+`,
+  },
+  {
+    name: "Brazil",
+    iso2: "br",
+    dial: 55,
+    format: "(..) .........",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -469,8 +619,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "British Indian Ocean Territory", iso2: "io", dial: 246, flag: `
+`,
+  },
+  {
+    name: "British Indian Ocean Territory",
+    iso2: "io",
+    dial: 246,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -561,8 +717,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Brunei", iso2: "bn", dial: 673, flag: `
+`,
+  },
+  {
+    name: "Brunei",
+    iso2: "bn",
+    dial: 673,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 511.989 511.989" style="enable-background:new 0 0 511.989 511.989;" >
@@ -589,8 +751,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Bulgaria", iso2: "bg", dial: 359, flag: `
+`,
+  },
+  {
+    name: "Bulgaria",
+    iso2: "bg",
+    dial: 359,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -602,8 +770,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Burkina Faso", iso2: "bf", dial: 226, flag: `
+`,
+  },
+  {
+    name: "Burkina Faso",
+    iso2: "bf",
+    dial: 226,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -615,8 +789,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Burundi", iso2: "bi", dial: 257, flag: `
+`,
+  },
+  {
+    name: "Burundi",
+    iso2: "bi",
+    dial: 257,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -641,8 +821,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Cambodia", iso2: "kh", dial: 855, flag: `
+`,
+  },
+  {
+    name: "Cambodia",
+    iso2: "kh",
+    dial: 855,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -659,8 +845,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Cameroon", iso2: "cm", dial: 237, flag: `
+`,
+  },
+  {
+    name: "Cameroon",
+    iso2: "cm",
+    dial: 237,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -674,8 +866,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Canada", iso2: "ca", dial: 1, flag: `
+`,
+  },
+  {
+    name: "Canada",
+    iso2: "ca",
+    dial: 1,
+    format: "(...) ...-....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -690,8 +888,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Cape Verde", iso2: "cv", dial: 238, flag: `
+`,
+  },
+  {
+    name: "Cape Verde",
+    iso2: "cv",
+    dial: 238,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -728,8 +932,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Central African Republic", iso2: "cf", dial: 236, flag: `
+`,
+  },
+  {
+    name: "Central African Republic",
+    iso2: "cf",
+    dial: 236,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -754,8 +964,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Chad", iso2: "td", dial: 235, flag: `
+`,
+  },
+  {
+    name: "Chad",
+    iso2: "td",
+    dial: 235,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -767,8 +983,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Chile", iso2: "cl", dial: 56, flag: `
+`,
+  },
+  {
+    name: "Chile",
+    iso2: "cl",
+    dial: 56,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -781,8 +1003,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "China", iso2: "cn", dial: 86, flag: `<?xml version="1.0" encoding="utf-8"?>
+`,
+  },
+  {
+    name: "China",
+    iso2: "cn",
+    dial: 86,
+    format: "..-.........",
+    flag: `<?xml version="1.0" encoding="utf-8"?>
 
 <svg  x="0px" y="0px"
 	 viewBox="-49 141 512 512" style="enable-background:new -49 141 512 512;" >
@@ -804,8 +1032,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 		213,266.3 237.9,276.4 	"/>
 </g>
 </svg>
-`},
-{name: "Colombia", iso2: "co", dial: 57, flag: `
+`,
+  },
+  {
+    name: "Colombia",
+    iso2: "co",
+    dial: 57,
+    format: "... ... ....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -817,8 +1051,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Comoros", iso2: "km", dial: 269, flag: `
+`,
+  },
+  {
+    name: "Comoros",
+    iso2: "km",
+    dial: 269,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -847,8 +1087,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Congo", iso2: "cd", dial: 243, flag: `
+`,
+  },
+  {
+    name: "Congo",
+    iso2: "cd",
+    dial: 243,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" >
@@ -862,8 +1108,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Congo", iso2: "cg", dial: 242, flag: `
+`,
+  },
+  {
+    name: "Congo",
+    iso2: "cg",
+    dial: 242,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" >
@@ -877,8 +1129,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Costa Rica", iso2: "cr", dial: 506, flag: `
+`,
+  },
+  {
+    name: "Costa Rica",
+    iso2: "cr",
+    dial: 506,
+    format: "....-....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -892,8 +1150,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Cote Ivoire", iso2: "ci", dial: 225, flag: `
+`,
+  },
+  {
+    name: "Cote Ivoire",
+    iso2: "ci",
+    dial: 225,
+    format: ".. .. .. ..",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -905,8 +1169,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Croatia", iso2: "hr", dial: 385, flag: `
+`,
+  },
+  {
+    name: "Croatia",
+    iso2: "hr",
+    dial: 385,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -944,8 +1214,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Cuba", iso2: "cu", dial: 53, flag: `
+`,
+  },
+  {
+    name: "Cuba",
+    iso2: "cu",
+    dial: 53,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -967,8 +1243,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Curacao", iso2: "cw", dial: 599, flag: `
+`,
+  },
+  {
+    name: "Curacao",
+    iso2: "cw",
+    dial: 599,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -986,8 +1268,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Cyprus", iso2: "cy", dial: 357, flag: `
+`,
+  },
+  {
+    name: "Cyprus",
+    iso2: "cy",
+    dial: 357,
+    format: ".. ......",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1003,8 +1291,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Czech Republic", iso2: "cz", dial: 420, flag: `
+`,
+  },
+  {
+    name: "Czech Republic",
+    iso2: "cz",
+    dial: 420,
+    format: "... ... ...",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1017,8 +1311,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Denmark", iso2: "dk", dial: 45, flag: `
+`,
+  },
+  {
+    name: "Denmark",
+    iso2: "dk",
+    dial: 45,
+    format: ".. .. .. ..",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1035,8 +1335,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Djibouti", iso2: "dj", dial: 253, flag: `
+`,
+  },
+  {
+    name: "Djibouti",
+    iso2: "dj",
+    dial: 253,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1052,8 +1358,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Dominica", iso2: "dm", dial: 1767, flag: `
+`,
+  },
+  {
+    name: "Dominica",
+    iso2: "dm",
+    dial: 1767,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1106,8 +1418,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Dominican Republic", iso2: "do", dial: 1, flag: `
+`,
+  },
+  {
+    name: "Dominican Republic",
+    iso2: "do",
+    dial: 1,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1125,8 +1443,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Ecuador", iso2: "ec", dial: 593, flag: `
+`,
+  },
+  {
+    name: "Ecuador",
+    iso2: "ec",
+    dial: 593,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1145,8 +1469,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Egypt", iso2: "eg", dial: 20, flag: `
+`,
+  },
+  {
+    name: "Egypt",
+    iso2: "eg",
+    dial: 20,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1161,8 +1491,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "El Salvador", iso2: "sv", dial: 503, flag: `
+`,
+  },
+  {
+    name: "El Salvador",
+    iso2: "sv",
+    dial: 503,
+    format: "....-....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1181,8 +1517,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Equatorial Guinea", iso2: "gq", dial: 240, flag: `
+`,
+  },
+  {
+    name: "Equatorial Guinea",
+    iso2: "gq",
+    dial: 240,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1203,8 +1545,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Eritrea", iso2: "er", dial: 291, flag: `
+`,
+  },
+  {
+    name: "Eritrea",
+    iso2: "er",
+    dial: 291,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1223,8 +1571,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Estonia", iso2: "ee", dial: 372, flag: `
+`,
+  },
+  {
+    name: "Estonia",
+    iso2: "ee",
+    dial: 372,
+    format: ".... ......",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1236,8 +1590,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Ethiopia", iso2: "et", dial: 251, flag: `
+`,
+  },
+  {
+    name: "Ethiopia",
+    iso2: "et",
+    dial: 251,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1257,8 +1617,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Fiji", iso2: "fj", dial: 679, flag: `
+`,
+  },
+  {
+    name: "Fiji",
+    iso2: "fj",
+    dial: 679,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1286,8 +1652,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Finland", iso2: "fi", dial: 358, flag: `
+`,
+  },
+  {
+    name: "Finland",
+    iso2: "fi",
+    dial: 358,
+    format: ".. ... .. ..",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1299,8 +1671,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "France", iso2: "fr", dial: 33, flag: `
+`,
+  },
+  {
+    name: "France",
+    iso2: "fr",
+    dial: 33,
+    format: ". .. .. .. ..",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1311,8 +1689,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "French Polynesia", iso2: "pf", dial: 689, flag: `
+`,
+  },
+  {
+    name: "French Polynesia",
+    iso2: "pf",
+    dial: 689,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1332,8 +1716,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Gabon", iso2: "ga", dial: 241, flag: `
+`,
+  },
+  {
+    name: "Gabon",
+    iso2: "ga",
+    dial: 241,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1345,8 +1735,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Gambia", iso2: "gm", dial: 220, flag: `
+`,
+  },
+  {
+    name: "Gambia",
+    iso2: "gm",
+    dial: 220,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1359,8 +1755,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Georgia", iso2: "ge", dial: 995, flag: `
+`,
+  },
+  {
+    name: "Georgia",
+    iso2: "ge",
+    dial: 995,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1382,8 +1784,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Germany", iso2: "de", dial: 49, flag: `
+`,
+  },
+  {
+    name: "Germany",
+    iso2: "de",
+    dial: 49,
+    format: ".... ........",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1396,8 +1804,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Ghana", iso2: "gh", dial: 233, flag: `
+`,
+  },
+  {
+    name: "Ghana",
+    iso2: "gh",
+    dial: 233,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1411,8 +1825,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Greece", iso2: "gr", dial: 30, flag: `
+`,
+  },
+  {
+    name: "Greece",
+    iso2: "gr",
+    dial: 30,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1430,8 +1850,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Grenada", iso2: "gd", dial: 1473, flag: `
+`,
+  },
+  {
+    name: "Grenada",
+    iso2: "gd",
+    dial: 1473,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1475,8 +1901,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Guam", iso2: "gu", dial: 1671, flag: `
+`,
+  },
+  {
+    name: "Guam",
+    iso2: "gu",
+    dial: 1671,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1501,8 +1933,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Guatemala", iso2: "gt", dial: 502, flag: `
+`,
+  },
+  {
+    name: "Guatemala",
+    iso2: "gt",
+    dial: 502,
+    format: "....-....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1522,8 +1960,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Guinea", iso2: "gn", dial: 224, flag: `
+`,
+  },
+  {
+    name: "Guinea",
+    iso2: "gn",
+    dial: 224,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1535,8 +1979,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Guinea-Bissau", iso2: "gw", dial: 245, flag: `
+`,
+  },
+  {
+    name: "Guinea-Bissau",
+    iso2: "gw",
+    dial: 245,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1554,8 +2004,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Guyana", iso2: "gy", dial: 592, flag: `
+`,
+  },
+  {
+    name: "Guyana",
+    iso2: "gy",
+    dial: 592,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1575,8 +2031,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Haiti", iso2: "ht", dial: 509, flag: `
+`,
+  },
+  {
+    name: "Haiti",
+    iso2: "ht",
+    dial: 509,
+    format: "....-....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1592,8 +2054,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Honduras", iso2: "hn", dial: 504, flag: `
+`,
+  },
+  {
+    name: "Honduras",
+    iso2: "hn",
+    dial: 504,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1615,8 +2083,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Hong Kong", iso2: "hk", dial: 852, flag: `
+`,
+  },
+  {
+    name: "Hong Kong",
+    iso2: "hk",
+    dial: 852,
+    format: ".... ....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1638,8 +2112,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Hungary", iso2: "hu", dial: 36, flag: `
+`,
+  },
+  {
+    name: "Hungary",
+    iso2: "hu",
+    dial: 36,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1651,8 +2131,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Iceland", iso2: "is", dial: 354, flag: `
+`,
+  },
+  {
+    name: "Iceland",
+    iso2: "is",
+    dial: 354,
+    format: "... ....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1672,8 +2158,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "India", iso2: "in", dial: 91, flag: `
+`,
+  },
+  {
+    name: "India",
+    iso2: "in",
+    dial: 91,
+    format: ".....-.....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1688,8 +2180,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Indonesia", iso2: "id", dial: 62, flag: `
+`,
+  },
+  {
+    name: "Indonesia",
+    iso2: "id",
+    dial: 62,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1699,8 +2197,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Iran", iso2: "ir", dial: 98, flag: `
+`,
+  },
+  {
+    name: "Iran",
+    iso2: "ir",
+    dial: 98,
+    format: "... ... ....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1719,8 +2223,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Iraq", iso2: "iq", dial: 964, flag: `
+`,
+  },
+  {
+    name: "Iraq",
+    iso2: "iq",
+    dial: 964,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1740,8 +2250,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Ireland", iso2: "ie", dial: 353, flag: `
+`,
+  },
+  {
+    name: "Ireland",
+    iso2: "ie",
+    dial: 353,
+    format: ".. .......",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1752,8 +2268,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Israel", iso2: "il", dial: 972, flag: `
+`,
+  },
+  {
+    name: "Israel",
+    iso2: "il",
+    dial: 972,
+    format: "... ... ....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1772,8 +2294,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Italy", iso2: "it", dial: 39, flag: `
+`,
+  },
+  {
+    name: "Italy",
+    iso2: "it",
+    dial: 39,
+    format: "... .......",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1784,8 +2312,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Jamaica", iso2: "jm", dial: 1876, flag: `
+`,
+  },
+  {
+    name: "Jamaica",
+    iso2: "jm",
+    dial: 1876,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1800,8 +2334,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Japan", iso2: "jp", dial: 81, flag: `
+`,
+  },
+  {
+    name: "Japan",
+    iso2: "jp",
+    dial: 81,
+    format: ".. .... ....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1811,8 +2351,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Jordan", iso2: "jo", dial: 962, flag: `
+`,
+  },
+  {
+    name: "Jordan",
+    iso2: "jo",
+    dial: 962,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1829,8 +2375,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Kazakhstan", iso2: "kz", dial: 7, flag: `
+`,
+  },
+  {
+    name: "Kazakhstan",
+    iso2: "kz",
+    dial: 7,
+    format: "... ...-..-..",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1847,8 +2399,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Kenya", iso2: "ke", dial: 254, flag: `
+`,
+  },
+  {
+    name: "Kenya",
+    iso2: "ke",
+    dial: 254,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1874,8 +2432,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Kiribati", iso2: "ki", dial: 686, flag: `
+`,
+  },
+  {
+    name: "Kiribati",
+    iso2: "ki",
+    dial: 686,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1930,8 +2494,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Kosovo", iso2: "xk", dial: 383, flag: `
+`,
+  },
+  {
+    name: "Kosovo",
+    iso2: "xk",
+    dial: 383,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1957,8 +2527,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Kuwait", iso2: "kw", dial: 965, flag: `
+`,
+  },
+  {
+    name: "Kuwait",
+    iso2: "kw",
+    dial: 965,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1971,8 +2547,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Kyrgyzstan", iso2: "kg", dial: 996, flag: `
+`,
+  },
+  {
+    name: "Kyrgyzstan",
+    iso2: "kg",
+    dial: 996,
+    format: "... ... ...",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1994,8 +2576,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Laos", iso2: "la", dial: 856, flag: `
+`,
+  },
+  {
+    name: "Laos",
+    iso2: "la",
+    dial: 856,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2012,8 +2600,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Latvia", iso2: "lv", dial: 371, flag: `
+`,
+  },
+  {
+    name: "Latvia",
+    iso2: "lv",
+    dial: 371,
+    format: ".. ... ...",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2025,8 +2619,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Lebanon", iso2: "lb", dial: 961, flag: `
+`,
+  },
+  {
+    name: "Lebanon",
+    iso2: "lb",
+    dial: 961,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2041,8 +2641,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Lesotho", iso2: "ls", dial: 266, flag: `
+`,
+  },
+  {
+    name: "Lesotho",
+    iso2: "ls",
+    dial: 266,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2056,8 +2662,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Liberia", iso2: "lr", dial: 231, flag: `
+`,
+  },
+  {
+    name: "Liberia",
+    iso2: "lr",
+    dial: 231,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2091,8 +2703,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Libya", iso2: "ly", dial: 218, flag: `
+`,
+  },
+  {
+    name: "Libya",
+    iso2: "ly",
+    dial: 218,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2111,8 +2729,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Liechtenstein", iso2: "li", dial: 423, flag: `
+`,
+  },
+  {
+    name: "Liechtenstein",
+    iso2: "li",
+    dial: 423,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2126,8 +2750,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Lithuania", iso2: "lt", dial: 370, flag: `
+`,
+  },
+  {
+    name: "Lithuania",
+    iso2: "lt",
+    dial: 370,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2139,8 +2769,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Luxembourg", iso2: "lu", dial: 352, flag: `
+`,
+  },
+  {
+    name: "Luxembourg",
+    iso2: "lu",
+    dial: 352,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2151,8 +2787,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Macedonia", iso2: "mk", dial: 389, flag: `
+`,
+  },
+  {
+    name: "Macedonia",
+    iso2: "mk",
+    dial: 389,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2173,8 +2815,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Madagascar", iso2: "mg", dial: 261, flag: `
+`,
+  },
+  {
+    name: "Madagascar",
+    iso2: "mg",
+    dial: 261,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2187,8 +2835,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Malawi", iso2: "mw", dial: 265, flag: `
+`,
+  },
+  {
+    name: "Malawi",
+    iso2: "mw",
+    dial: 265,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2202,8 +2856,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Malaysia", iso2: "my", dial: 60, flag: `
+`,
+  },
+  {
+    name: "Malaysia",
+    iso2: "my",
+    dial: 60,
+    format: "..-....-....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2227,8 +2887,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Maldives", iso2: "mv", dial: 960, flag: `
+`,
+  },
+  {
+    name: "Maldives",
+    iso2: "mv",
+    dial: 960,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2241,8 +2907,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Mali", iso2: "ml", dial: 223, flag: `
+`,
+  },
+  {
+    name: "Mali",
+    iso2: "ml",
+    dial: 223,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2254,8 +2926,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Malta", iso2: "mt", dial: 356, flag: `
+`,
+  },
+  {
+    name: "Malta",
+    iso2: "mt",
+    dial: 356,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2267,8 +2945,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Marshall Islands", iso2: "mh", dial: 692, flag: `
+`,
+  },
+  {
+    name: "Marshall Islands",
+    iso2: "mh",
+    dial: 692,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2285,8 +2969,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Martinique", iso2: "mq", dial: 596, flag: `
+`,
+  },
+  {
+    name: "Martinique",
+    iso2: "mq",
+    dial: 596,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2325,8 +3015,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Mauritania", iso2: "mr", dial: 222, flag: `
+`,
+  },
+  {
+    name: "Mauritania",
+    iso2: "mr",
+    dial: 222,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2341,8 +3037,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Mauritius", iso2: "mu", dial: 230, flag: `
+`,
+  },
+  {
+    name: "Mauritius",
+    iso2: "mu",
+    dial: 230,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2357,8 +3059,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Mexico", iso2: "mx", dial: 52, flag: `
+`,
+  },
+  {
+    name: "Mexico",
+    iso2: "mx",
+    dial: 52,
+    format: "... ... ....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2377,8 +3085,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Micronesia", iso2: "fm", dial: 691, flag: `
+`,
+  },
+  {
+    name: "Micronesia",
+    iso2: "fm",
+    dial: 691,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2396,8 +3110,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Moldova", iso2: "md", dial: 373, flag: `
+`,
+  },
+  {
+    name: "Moldova",
+    iso2: "md",
+    dial: 373,
+    format: "(..) ..-..-..",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2416,8 +3136,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Monaco", iso2: "mc", dial: 377, flag: `
+`,
+  },
+  {
+    name: "Monaco",
+    iso2: "mc",
+    dial: 377,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2427,8 +3153,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Mongolia", iso2: "mn", dial: 976, flag: `
+`,
+  },
+  {
+    name: "Mongolia",
+    iso2: "mn",
+    dial: 976,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2450,8 +3182,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Montenegro", iso2: "me", dial: 382, flag: `
+`,
+  },
+  {
+    name: "Montenegro",
+    iso2: "me",
+    dial: 382,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2476,8 +3214,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Morocco", iso2: "ma", dial: 212, flag: `
+`,
+  },
+  {
+    name: "Morocco",
+    iso2: "ma",
+    dial: 212,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2491,8 +3235,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Mozambique", iso2: "mz", dial: 258, flag: `
+`,
+  },
+  {
+    name: "Mozambique",
+    iso2: "mz",
+    dial: 258,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2514,8 +3264,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Myanmar", iso2: "mm", dial: 95, flag: `
+`,
+  },
+  {
+    name: "Myanmar",
+    iso2: "mm",
+    dial: 95,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2529,8 +3285,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Namibia", iso2: "na", dial: 264, flag: `
+`,
+  },
+  {
+    name: "Namibia",
+    iso2: "na",
+    dial: 264,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2549,8 +3311,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Nauru", iso2: "nr", dial: 674, flag: `
+`,
+  },
+  {
+    name: "Nauru",
+    iso2: "nr",
+    dial: 674,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2567,8 +3335,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Nepal", iso2: "np", dial: 977, flag: `
+`,
+  },
+  {
+    name: "Nepal",
+    iso2: "np",
+    dial: 977,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2592,8 +3366,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Netherlands", iso2: "nl", dial: 31, flag: `
+`,
+  },
+  {
+    name: "Netherlands",
+    iso2: "nl",
+    dial: 31,
+    format: ".. ........",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2604,8 +3384,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "New Zealand", iso2: "nz", dial: 64, flag: `
+`,
+  },
+  {
+    name: "New Zealand",
+    iso2: "nz",
+    dial: 64,
+    format: "...-...-....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2633,8 +3419,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Nicaragua", iso2: "ni", dial: 505, flag: `
+`,
+  },
+  {
+    name: "Nicaragua",
+    iso2: "ni",
+    dial: 505,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2653,8 +3445,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Niger", iso2: "ne", dial: 227, flag: `
+`,
+  },
+  {
+    name: "Niger",
+    iso2: "ne",
+    dial: 227,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2668,8 +3466,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Nigeria", iso2: "ng", dial: 234, flag: `
+`,
+  },
+  {
+    name: "Nigeria",
+    iso2: "ng",
+    dial: 234,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2681,8 +3485,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "North Korea", iso2: "kp", dial: 850, flag: `
+`,
+  },
+  {
+    name: "North Korea",
+    iso2: "kp",
+    dial: 850,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2700,8 +3510,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Norway", iso2: "no", dial: 47, flag: `
+`,
+  },
+  {
+    name: "Norway",
+    iso2: "no",
+    dial: 47,
+    format: "... .. ...",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2721,8 +3537,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Oman", iso2: "om", dial: 968, flag: `
+`,
+  },
+  {
+    name: "Oman",
+    iso2: "om",
+    dial: 968,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2740,8 +3562,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Pakistan", iso2: "pk", dial: 92, flag: `
+`,
+  },
+  {
+    name: "Pakistan",
+    iso2: "pk",
+    dial: 92,
+    format: "...-.......",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2762,8 +3590,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Palau", iso2: "pw", dial: 680, flag: `
+`,
+  },
+  {
+    name: "Palau",
+    iso2: "pw",
+    dial: 680,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2773,8 +3607,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Palestine", iso2: "ps", dial: 970, flag: `
+`,
+  },
+  {
+    name: "Palestine",
+    iso2: "ps",
+    dial: 970,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2788,8 +3628,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Panama", iso2: "pa", dial: 507, flag: `
+`,
+  },
+  {
+    name: "Panama",
+    iso2: "pa",
+    dial: 507,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2804,8 +3650,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Papua New Guinea", iso2: "pg", dial: 675, flag: `
+`,
+  },
+  {
+    name: "Papua New Guinea",
+    iso2: "pg",
+    dial: 675,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2837,8 +3689,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Paraguay", iso2: "py", dial: 595, flag: `
+`,
+  },
+  {
+    name: "Paraguay",
+    iso2: "py",
+    dial: 595,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2855,8 +3713,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Peru", iso2: "pe", dial: 51, flag: `
+`,
+  },
+  {
+    name: "Peru",
+    iso2: "pe",
+    dial: 51,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2868,8 +3732,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Philippines", iso2: "ph", dial: 63, flag: `
+`,
+  },
+  {
+    name: "Philippines",
+    iso2: "ph",
+    dial: 63,
+    format: ".... .......",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2892,8 +3762,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Poland", iso2: "pl", dial: 48, flag: `
+`,
+  },
+  {
+    name: "Poland",
+    iso2: "pl",
+    dial: 48,
+    format: "...-...-...",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2903,8 +3779,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Portugal", iso2: "pt", dial: 351, flag: `
+`,
+  },
+  {
+    name: "Portugal",
+    iso2: "pt",
+    dial: 351,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2921,8 +3803,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Puerto Rico", iso2: "pr", dial: 1, flag: `
+`,
+  },
+  {
+    name: "Puerto Rico",
+    iso2: "pr",
+    dial: 1,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2941,8 +3829,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Qatar", iso2: "qa", dial: 974, flag: `
+`,
+  },
+  {
+    name: "Qatar",
+    iso2: "qa",
+    dial: 974,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2955,8 +3849,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Romania", iso2: "ro", dial: 40, flag: `
+`,
+  },
+  {
+    name: "Romania",
+    iso2: "ro",
+    dial: 40,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2971,8 +3871,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Russia", iso2: "ru", dial: 7, flag: `
+`,
+  },
+  {
+    name: "Russia",
+    iso2: "ru",
+    dial: 7,
+    format: "(...) ...-..-..",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2984,8 +3890,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Rwanda", iso2: "rw", dial: 250, flag: `
+`,
+  },
+  {
+    name: "Rwanda",
+    iso2: "rw",
+    dial: 250,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3001,8 +3913,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Saint Kitts and Nevis", iso2: "kn", dial: 1869, flag: `
+`,
+  },
+  {
+    name: "Saint Kitts and Nevis",
+    iso2: "kn",
+    dial: 1869,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" >
@@ -3022,8 +3940,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Samoa", iso2: "ws", dial: 685, flag: `
+`,
+  },
+  {
+    name: "Samoa",
+    iso2: "ws",
+    dial: 685,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3045,8 +3969,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "San Marino", iso2: "sm", dial: 378, flag: `
+`,
+  },
+  {
+    name: "San Marino",
+    iso2: "sm",
+    dial: 378,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3070,8 +4000,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Sao Tome and Principe", iso2: "st", dial: 239, flag: `
+`,
+  },
+  {
+    name: "Sao Tome and Principe",
+    iso2: "st",
+    dial: 239,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3092,8 +4028,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Saudi Arabia", iso2: "sa", dial: 966, flag: `
+`,
+  },
+  {
+    name: "Saudi Arabia",
+    iso2: "sa",
+    dial: 966,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3115,8 +4057,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Senegal", iso2: "sn", dial: 221, flag: `
+`,
+  },
+  {
+    name: "Senegal",
+    iso2: "sn",
+    dial: 221,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3132,8 +4080,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Serbia", iso2: "rs", dial: 381, flag: `
+`,
+  },
+  {
+    name: "Serbia",
+    iso2: "rs",
+    dial: 381,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3160,8 +4114,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Seychelles", iso2: "sc", dial: 248, flag: `
+`,
+  },
+  {
+    name: "Seychelles",
+    iso2: "sc",
+    dial: 248,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3177,8 +4137,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Sierra Leone", iso2: "sl", dial: 232, flag: `
+`,
+  },
+  {
+    name: "Sierra Leone",
+    iso2: "sl",
+    dial: 232,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3190,8 +4156,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Singapore", iso2: "sg", dial: 65, flag: `
+`,
+  },
+  {
+    name: "Singapore",
+    iso2: "sg",
+    dial: 65,
+    format: "....-....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3215,8 +4187,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Slovakia", iso2: "sk", dial: 421, flag: `
+`,
+  },
+  {
+    name: "Slovakia",
+    iso2: "sk",
+    dial: 421,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3239,8 +4217,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Slovenia", iso2: "si", dial: 386, flag: `
+`,
+  },
+  {
+    name: "Slovenia",
+    iso2: "si",
+    dial: 386,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3254,8 +4238,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Solomon Islands", iso2: "sb", dial: 677, flag: `
+`,
+  },
+  {
+    name: "Solomon Islands",
+    iso2: "sb",
+    dial: 677,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" >
@@ -3281,8 +4271,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Somalia", iso2: "so", dial: 252, flag: `
+`,
+  },
+  {
+    name: "Somalia",
+    iso2: "so",
+    dial: 252,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3293,8 +4289,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "South Africa", iso2: "za", dial: 27, flag: `
+`,
+  },
+  {
+    name: "South Africa",
+    iso2: "za",
+    dial: 27,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3313,8 +4315,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "South Korea", iso2: "kr", dial: 82, flag: `
+`,
+  },
+  {
+    name: "South Korea",
+    iso2: "kr",
+    dial: 82,
+    format: "... .... ....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3344,8 +4352,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "South Sudan", iso2: "ss", dial: 211, flag: `
+`,
+  },
+  {
+    name: "South Sudan",
+    iso2: "ss",
+    dial: 211,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3364,8 +4378,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Spain", iso2: "es", dial: 34, flag: `
+`,
+  },
+  {
+    name: "Spain",
+    iso2: "es",
+    dial: 34,
+    format: "... ... ...",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3378,8 +4398,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Sri Lanka", iso2: "lk", dial: 94, flag: `
+`,
+  },
+  {
+    name: "Sri Lanka",
+    iso2: "lk",
+    dial: 94,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" >
@@ -3400,8 +4426,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Sudan", iso2: "sd", dial: 249, flag: `
+`,
+  },
+  {
+    name: "Sudan",
+    iso2: "sd",
+    dial: 249,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3415,8 +4447,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Suriname", iso2: "sr", dial: 597, flag: `
+`,
+  },
+  {
+    name: "Suriname",
+    iso2: "sr",
+    dial: 597,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3435,8 +4473,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Swaziland", iso2: "sz", dial: 268, flag: `
+`,
+  },
+  {
+    name: "Swaziland",
+    iso2: "sz",
+    dial: 268,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3462,8 +4506,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Sweden", iso2: "se", dial: 46, flag: `
+`,
+  },
+  {
+    name: "Sweden",
+    iso2: "se",
+    dial: 46,
+    format: "(...) ...-...",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3480,8 +4530,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Switzerland", iso2: "ch", dial: 41, flag: `
+`,
+  },
+  {
+    name: "Switzerland",
+    iso2: "ch",
+    dial: 41,
+    format: ".. ... .. ..",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3492,8 +4548,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Syria", iso2: "sy", dial: 963, flag: `
+`,
+  },
+  {
+    name: "Syria",
+    iso2: "sy",
+    dial: 963,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3509,8 +4571,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Taiwan", iso2: "tw", dial: 886, flag: `
+`,
+  },
+  {
+    name: "Taiwan",
+    iso2: "tw",
+    dial: 886,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3527,8 +4595,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Tajikistan", iso2: "tj", dial: 992, flag: `
+`,
+  },
+  {
+    name: "Tajikistan",
+    iso2: "tj",
+    dial: 992,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3557,8 +4631,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Tanzania", iso2: "tz", dial: 255, flag: `
+`,
+  },
+  {
+    name: "Tanzania",
+    iso2: "tz",
+    dial: 255,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3573,8 +4653,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Thailand", iso2: "th", dial: 66, flag: `
+`,
+  },
+  {
+    name: "Thailand",
+    iso2: "th",
+    dial: 66,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3588,8 +4674,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Togo", iso2: "tg", dial: 228, flag: `
+`,
+  },
+  {
+    name: "Togo",
+    iso2: "tg",
+    dial: 228,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3608,8 +4700,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Tonga", iso2: "to", dial: 676, flag: `
+`,
+  },
+  {
+    name: "Tonga",
+    iso2: "to",
+    dial: 676,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3623,8 +4721,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Trinidad and Tobago", iso2: "tt", dial: 1868, flag: `
+`,
+  },
+  {
+    name: "Trinidad and Tobago",
+    iso2: "tt",
+    dial: 1868,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3642,8 +4746,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Tunisia", iso2: "tn", dial: 216, flag: `
+`,
+  },
+  {
+    name: "Tunisia",
+    iso2: "tn",
+    dial: 216,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3659,8 +4769,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Turkey", iso2: "tr", dial: 90, flag: `
+`,
+  },
+  {
+    name: "Turkey",
+    iso2: "tr",
+    dial: 90,
+    format: "... ... .. ..",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3675,8 +4791,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Turkmenistan", iso2: "tm", dial: 993, flag: `
+`,
+  },
+  {
+    name: "Turkmenistan",
+    iso2: "tm",
+    dial: 993,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3730,8 +4852,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Tuvalu", iso2: "tv", dial: 688, flag: `
+`,
+  },
+  {
+    name: "Tuvalu",
+    iso2: "tv",
+    dial: 688,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3773,8 +4901,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Uganda", iso2: "ug", dial: 256, flag: `
+`,
+  },
+  {
+    name: "Uganda",
+    iso2: "ug",
+    dial: 256,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3796,8 +4930,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Ukraine", iso2: "ua", dial: 380, flag: `
+`,
+  },
+  {
+    name: "Ukraine",
+    iso2: "ua",
+    dial: 380,
+    format: "(..) ... .. ..",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3807,8 +4947,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "United Arab Emirates", iso2: "ae", dial: 971, flag: `
+`,
+  },
+  {
+    name: "United Arab Emirates",
+    iso2: "ae",
+    dial: 971,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3821,8 +4967,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "United Kingdom", iso2: "gb", dial: 44, flag: `
+`,
+  },
+  {
+    name: "United Kingdom",
+    iso2: "gb",
+    dial: 44,
+    format: ".... ......",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3854,8 +5006,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "United States", iso2: "us", dial: 1, flag: `
+`,
+  },
+  {
+    name: "United States",
+    iso2: "us",
+    dial: 1,
+    format: "(...) ...-....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3881,8 +5039,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Uruguay", iso2: "uy", dial: 598, flag: `
+`,
+  },
+  {
+    name: "Uruguay",
+    iso2: "uy",
+    dial: 598,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3905,8 +5069,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Uzbekistan", iso2: "uz", dial: 998, flag: `
+`,
+  },
+  {
+    name: "Uzbekistan",
+    iso2: "uz",
+    dial: 998,
+    format: ".. ... .. ..",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3955,8 +5125,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Vanuatu", iso2: "vu", dial: 678, flag: `
+`,
+  },
+  {
+    name: "Vanuatu",
+    iso2: "vu",
+    dial: 678,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" >
@@ -4006,8 +5182,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Vatican City", iso2: "va", dial: 39, flag: `
+`,
+  },
+  {
+    name: "Vatican City",
+    iso2: "va",
+    dial: 39,
+    format: ".. .... ....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -4026,8 +5208,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Venezuela", iso2: "ve", dial: 58, flag: `
+`,
+  },
+  {
+    name: "Venezuela",
+    iso2: "ve",
+    dial: 58,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -4057,8 +5245,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Vietnam", iso2: "vn", dial: 84, flag: `
+`,
+  },
+  {
+    name: "Vietnam",
+    iso2: "vn",
+    dial: 84,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -4069,8 +5263,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Yemen", iso2: "ye", dial: 967, flag: `
+`,
+  },
+  {
+    name: "Yemen",
+    iso2: "ye",
+    dial: 967,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -4081,8 +5281,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Zambia", iso2: "zm", dial: 260, flag: `
+`,
+  },
+  {
+    name: "Zambia",
+    iso2: "zm",
+    dial: 260,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -4098,8 +5304,14 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`},
-{name: "Zimbabwe", iso2: "zw", dial: 263, flag: `
+`,
+  },
+  {
+    name: "Zimbabwe",
+    iso2: "zw",
+    dial: 263,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -4131,5 +5343,6 @@ export const countriesWithDial = [{name: "Afghanistan", iso2: "af", dial: 93, fl
 
 </g>
 </svg>
-`}
+`,
+  },
 ];
