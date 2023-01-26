@@ -1,6 +1,6 @@
 {
   "name": "axelra-country-dial-codes",
-  "version": "1.0.3",
+  "version": "1.0.7",
   "description": "axelra country dial codes.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

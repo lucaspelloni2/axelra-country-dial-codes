@@ -8,6 +8,7 @@ const CountryCodes = `const countryCodes = [${isos.map((iso, index) => {
 })}] as const;`;
 
 const CountryCode = `export type CountryCode = typeof countryCodes[number];`;
+const CountryWithDialType = `export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number; flag: string; format: string;};`;
 
 const toPrint = rawCountries.map((c) => {
   const name = c[0] as string;
@@ -36,7 +37,7 @@ const string = toPrint.map((value, i) => {
 
 fs.writeFileSync(
   "src/data.ts",
-  `${CountryCodes}\n${CountryCode}\n export const countriesWithDial = [${string.join(
+  `${CountryCodes}\n${CountryCode}\n${CountryWithDialType}\n export const countriesWithDial: CountryWithDialType[] = [${string.join(
     ""
   )}];`
 );

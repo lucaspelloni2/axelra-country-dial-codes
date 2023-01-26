@@ -1,6 +1,222 @@
-const countryCodes = ["af","al","dz","ad","ao","ag","ar","am","aw","au","at","az","bs","bh","bd","bb","by","be","bz","bj","bt","bo","ba","bw","br","io","bn","bg","bf","bi","kh","cm","ca","cv","cf","td","cl","cn","co","km","cd","cg","cr","ci","hr","cu","cw","cy","cz","dk","dj","dm","do","ec","eg","sv","gq","er","ee","et","fj","fi","fr","pf","ga","gm","ge","de","gh","gr","gd","gu","gt","gn","gw","gy","ht","hn","hk","hu","is","in","id","ir","iq","ie","il","it","jm","jp","jo","kz","ke","ki","xk","kw","kg","la","lv","lb","ls","lr","ly","li","lt","lu","mk","mg","mw","my","mv","ml","mt","mh","mq","mr","mu","mx","fm","md","mc","mn","me","ma","mz","mm","na","nr","np","nl","nz","ni","ne","ng","kp","no","om","pk","pw","ps","pa","pg","py","pe","ph","pl","pt","pr","qa","ro","ru","rw","kn","ws","sm","st","sa","sn","rs","sc","sl","sg","sk","si","sb","so","za","kr","ss","es","lk","sd","sr","sz","se","ch","sy","tw","tj","tz","th","tg","to","tt","tn","tr","tm","tv","ug","ua","ae","gb","us","uy","uz","vu","va","ve","vn","ye","zm","zw"] as const;
-export type CountryCode = typeof countryCodes[number];
- export const countriesWithDial = [{name: "Afghanistan", iso2: "af" as CountryCode, dial: 93, format: "", flag: `
+const countryCodes = [
+  "af",
+  "al",
+  "dz",
+  "ad",
+  "ao",
+  "ag",
+  "ar",
+  "am",
+  "aw",
+  "au",
+  "at",
+  "az",
+  "bs",
+  "bh",
+  "bd",
+  "bb",
+  "by",
+  "be",
+  "bz",
+  "bj",
+  "bt",
+  "bo",
+  "ba",
+  "bw",
+  "br",
+  "io",
+  "bn",
+  "bg",
+  "bf",
+  "bi",
+  "kh",
+  "cm",
+  "ca",
+  "cv",
+  "cf",
+  "td",
+  "cl",
+  "cn",
+  "co",
+  "km",
+  "cd",
+  "cg",
+  "cr",
+  "ci",
+  "hr",
+  "cu",
+  "cw",
+  "cy",
+  "cz",
+  "dk",
+  "dj",
+  "dm",
+  "do",
+  "ec",
+  "eg",
+  "sv",
+  "gq",
+  "er",
+  "ee",
+  "et",
+  "fj",
+  "fi",
+  "fr",
+  "pf",
+  "ga",
+  "gm",
+  "ge",
+  "de",
+  "gh",
+  "gr",
+  "gd",
+  "gu",
+  "gt",
+  "gn",
+  "gw",
+  "gy",
+  "ht",
+  "hn",
+  "hk",
+  "hu",
+  "is",
+  "in",
+  "id",
+  "ir",
+  "iq",
+  "ie",
+  "il",
+  "it",
+  "jm",
+  "jp",
+  "jo",
+  "kz",
+  "ke",
+  "ki",
+  "xk",
+  "kw",
+  "kg",
+  "la",
+  "lv",
+  "lb",
+  "ls",
+  "lr",
+  "ly",
+  "li",
+  "lt",
+  "lu",
+  "mk",
+  "mg",
+  "mw",
+  "my",
+  "mv",
+  "ml",
+  "mt",
+  "mh",
+  "mq",
+  "mr",
+  "mu",
+  "mx",
+  "fm",
+  "md",
+  "mc",
+  "mn",
+  "me",
+  "ma",
+  "mz",
+  "mm",
+  "na",
+  "nr",
+  "np",
+  "nl",
+  "nz",
+  "ni",
+  "ne",
+  "ng",
+  "kp",
+  "no",
+  "om",
+  "pk",
+  "pw",
+  "ps",
+  "pa",
+  "pg",
+  "py",
+  "pe",
+  "ph",
+  "pl",
+  "pt",
+  "pr",
+  "qa",
+  "ro",
+  "ru",
+  "rw",
+  "kn",
+  "ws",
+  "sm",
+  "st",
+  "sa",
+  "sn",
+  "rs",
+  "sc",
+  "sl",
+  "sg",
+  "sk",
+  "si",
+  "sb",
+  "so",
+  "za",
+  "kr",
+  "ss",
+  "es",
+  "lk",
+  "sd",
+  "sr",
+  "sz",
+  "se",
+  "ch",
+  "sy",
+  "tw",
+  "tj",
+  "tz",
+  "th",
+  "tg",
+  "to",
+  "tt",
+  "tn",
+  "tr",
+  "tm",
+  "tv",
+  "ug",
+  "ua",
+  "ae",
+  "gb",
+  "us",
+  "uy",
+  "uz",
+  "vu",
+  "va",
+  "ve",
+  "vn",
+  "ye",
+  "zm",
+  "zw",
+] as const;
+export type CountryCode = (typeof countryCodes)[number];
+export type CountryWithDialType = {
+  name: string;
+  iso2: CountryCode;
+  dial: number;
+  flag: string;
+  format: string;
+};
+export const countriesWithDial: CountryWithDialType[] = [
+  {
+    name: "Afghanistan",
+    iso2: "af" as CountryCode,
+    dial: 93,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -18,8 +234,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Albania", iso2: "al" as CountryCode, dial: 355, format: "", flag: `
+`,
+  },
+  {
+    name: "Albania",
+    iso2: "al" as CountryCode,
+    dial: 355,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -35,8 +257,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Algeria", iso2: "dz" as CountryCode, dial: 213, format: "", flag: `
+`,
+  },
+  {
+    name: "Algeria",
+    iso2: "dz" as CountryCode,
+    dial: 213,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -52,8 +280,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Andorra", iso2: "ad" as CountryCode, dial: 376, format: "", flag: `
+`,
+  },
+  {
+    name: "Andorra",
+    iso2: "ad" as CountryCode,
+    dial: 376,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -77,8 +311,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Angola", iso2: "ao" as CountryCode, dial: 244, format: "", flag: `
+`,
+  },
+  {
+    name: "Angola",
+    iso2: "ao" as CountryCode,
+    dial: 244,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -98,8 +338,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Antigua and Barbuda", iso2: "ag" as CountryCode, dial: 1268, format: "", flag: `
+`,
+  },
+  {
+    name: "Antigua and Barbuda",
+    iso2: "ag" as CountryCode,
+    dial: 1268,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -116,8 +362,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Argentina", iso2: "ar" as CountryCode, dial: 54, format: "(..) ........", flag: `
+`,
+  },
+  {
+    name: "Argentina",
+    iso2: "ar" as CountryCode,
+    dial: 54,
+    format: "(..) ........",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -133,8 +385,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Armenia", iso2: "am" as CountryCode, dial: 374, format: ".. ......", flag: `
+`,
+  },
+  {
+    name: "Armenia",
+    iso2: "am" as CountryCode,
+    dial: 374,
+    format: ".. ......",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -146,8 +404,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Aruba", iso2: "aw" as CountryCode, dial: 297, format: "", flag: `
+`,
+  },
+  {
+    name: "Aruba",
+    iso2: "aw" as CountryCode,
+    dial: 297,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -167,8 +431,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Australia", iso2: "au" as CountryCode, dial: 61, format: "(..) .... ....", flag: `
+`,
+  },
+  {
+    name: "Australia",
+    iso2: "au" as CountryCode,
+    dial: 61,
+    format: "(..) .... ....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -206,8 +476,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Austria", iso2: "at" as CountryCode, dial: 43, format: "", flag: `
+`,
+  },
+  {
+    name: "Austria",
+    iso2: "at" as CountryCode,
+    dial: 43,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -220,8 +496,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Azerbaijan", iso2: "az" as CountryCode, dial: 994, format: "(..) ... .. ..", flag: `
+`,
+  },
+  {
+    name: "Azerbaijan",
+    iso2: "az" as CountryCode,
+    dial: 994,
+    format: "(..) ... .. ..",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -240,8 +522,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Bahamas", iso2: "bs" as CountryCode, dial: 1242, format: "", flag: `
+`,
+  },
+  {
+    name: "Bahamas",
+    iso2: "bs" as CountryCode,
+    dial: 1242,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -257,8 +545,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Bahrain", iso2: "bh" as CountryCode, dial: 973, format: "", flag: `
+`,
+  },
+  {
+    name: "Bahrain",
+    iso2: "bh" as CountryCode,
+    dial: 973,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -270,8 +564,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Bangladesh", iso2: "bd" as CountryCode, dial: 880, format: "", flag: `
+`,
+  },
+  {
+    name: "Bangladesh",
+    iso2: "bd" as CountryCode,
+    dial: 880,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -281,8 +581,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Barbados", iso2: "bb" as CountryCode, dial: 1246, format: "", flag: `
+`,
+  },
+  {
+    name: "Barbados",
+    iso2: "bb" as CountryCode,
+    dial: 1246,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -300,8 +606,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Belarus", iso2: "by" as CountryCode, dial: 375, format: "(..) ... .. ..", flag: `
+`,
+  },
+  {
+    name: "Belarus",
+    iso2: "by" as CountryCode,
+    dial: 375,
+    format: "(..) ... .. ..",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -324,8 +636,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Belgium", iso2: "be" as CountryCode, dial: 32, format: "... .. .. ..", flag: `
+`,
+  },
+  {
+    name: "Belgium",
+    iso2: "be" as CountryCode,
+    dial: 32,
+    format: "... .. .. ..",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -337,8 +655,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Belize", iso2: "bz" as CountryCode, dial: 501, format: "", flag: `
+`,
+  },
+  {
+    name: "Belize",
+    iso2: "bz" as CountryCode,
+    dial: 501,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -360,8 +684,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Benin", iso2: "bj" as CountryCode, dial: 229, format: "", flag: `
+`,
+  },
+  {
+    name: "Benin",
+    iso2: "bj" as CountryCode,
+    dial: 229,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -373,8 +703,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Bhutan", iso2: "bt" as CountryCode, dial: 975, format: "", flag: `
+`,
+  },
+  {
+    name: "Bhutan",
+    iso2: "bt" as CountryCode,
+    dial: 975,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -397,8 +733,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Bolivia", iso2: "bo" as CountryCode, dial: 591, format: "", flag: `
+`,
+  },
+  {
+    name: "Bolivia",
+    iso2: "bo" as CountryCode,
+    dial: 591,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -410,8 +752,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Bosnia and Herzegovina", iso2: "ba" as CountryCode, dial: 387, format: "", flag: `
+`,
+  },
+  {
+    name: "Bosnia and Herzegovina",
+    iso2: "ba" as CountryCode,
+    dial: 387,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -434,8 +782,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Botswana", iso2: "bw" as CountryCode, dial: 267, format: "", flag: `
+`,
+  },
+  {
+    name: "Botswana",
+    iso2: "bw" as CountryCode,
+    dial: 267,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -453,8 +807,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Brazil", iso2: "br" as CountryCode, dial: 55, format: "(..) .........", flag: `
+`,
+  },
+  {
+    name: "Brazil",
+    iso2: "br" as CountryCode,
+    dial: 55,
+    format: "(..) .........",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -471,8 +831,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "British Indian Ocean Territory", iso2: "io" as CountryCode, dial: 246, format: "", flag: `
+`,
+  },
+  {
+    name: "British Indian Ocean Territory",
+    iso2: "io" as CountryCode,
+    dial: 246,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -563,8 +929,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Brunei", iso2: "bn" as CountryCode, dial: 673, format: "", flag: `
+`,
+  },
+  {
+    name: "Brunei",
+    iso2: "bn" as CountryCode,
+    dial: 673,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 511.989 511.989" style="enable-background:new 0 0 511.989 511.989;" >
@@ -591,8 +963,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Bulgaria", iso2: "bg" as CountryCode, dial: 359, format: "", flag: `
+`,
+  },
+  {
+    name: "Bulgaria",
+    iso2: "bg" as CountryCode,
+    dial: 359,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -604,8 +982,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Burkina Faso", iso2: "bf" as CountryCode, dial: 226, format: "", flag: `
+`,
+  },
+  {
+    name: "Burkina Faso",
+    iso2: "bf" as CountryCode,
+    dial: 226,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -617,8 +1001,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Burundi", iso2: "bi" as CountryCode, dial: 257, format: "", flag: `
+`,
+  },
+  {
+    name: "Burundi",
+    iso2: "bi" as CountryCode,
+    dial: 257,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -643,8 +1033,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Cambodia", iso2: "kh" as CountryCode, dial: 855, format: "", flag: `
+`,
+  },
+  {
+    name: "Cambodia",
+    iso2: "kh" as CountryCode,
+    dial: 855,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -661,8 +1057,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Cameroon", iso2: "cm" as CountryCode, dial: 237, format: "", flag: `
+`,
+  },
+  {
+    name: "Cameroon",
+    iso2: "cm" as CountryCode,
+    dial: 237,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -676,8 +1078,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Canada", iso2: "ca" as CountryCode, dial: 1, format: "(...) ...-....", flag: `
+`,
+  },
+  {
+    name: "Canada",
+    iso2: "ca" as CountryCode,
+    dial: 1,
+    format: "(...) ...-....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -692,8 +1100,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Cape Verde", iso2: "cv" as CountryCode, dial: 238, format: "", flag: `
+`,
+  },
+  {
+    name: "Cape Verde",
+    iso2: "cv" as CountryCode,
+    dial: 238,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -730,8 +1144,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Central African Republic", iso2: "cf" as CountryCode, dial: 236, format: "", flag: `
+`,
+  },
+  {
+    name: "Central African Republic",
+    iso2: "cf" as CountryCode,
+    dial: 236,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -756,8 +1176,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Chad", iso2: "td" as CountryCode, dial: 235, format: "", flag: `
+`,
+  },
+  {
+    name: "Chad",
+    iso2: "td" as CountryCode,
+    dial: 235,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -769,8 +1195,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Chile", iso2: "cl" as CountryCode, dial: 56, format: "", flag: `
+`,
+  },
+  {
+    name: "Chile",
+    iso2: "cl" as CountryCode,
+    dial: 56,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -783,8 +1215,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "China", iso2: "cn" as CountryCode, dial: 86, format: "..-.........", flag: `<?xml version="1.0" encoding="utf-8"?>
+`,
+  },
+  {
+    name: "China",
+    iso2: "cn" as CountryCode,
+    dial: 86,
+    format: "..-.........",
+    flag: `<?xml version="1.0" encoding="utf-8"?>
 
 <svg  x="0px" y="0px"
 	 viewBox="-49 141 512 512" style="enable-background:new -49 141 512 512;" >
@@ -806,8 +1244,14 @@ export type CountryCode = typeof countryCodes[number];
 		213,266.3 237.9,276.4 	"/>
 </g>
 </svg>
-`},
-{name: "Colombia", iso2: "co" as CountryCode, dial: 57, format: "... ... ....", flag: `
+`,
+  },
+  {
+    name: "Colombia",
+    iso2: "co" as CountryCode,
+    dial: 57,
+    format: "... ... ....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -819,8 +1263,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Comoros", iso2: "km" as CountryCode, dial: 269, format: "", flag: `
+`,
+  },
+  {
+    name: "Comoros",
+    iso2: "km" as CountryCode,
+    dial: 269,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -849,8 +1299,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Congo", iso2: "cd" as CountryCode, dial: 243, format: "", flag: `
+`,
+  },
+  {
+    name: "Congo",
+    iso2: "cd" as CountryCode,
+    dial: 243,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" >
@@ -864,8 +1320,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Congo", iso2: "cg" as CountryCode, dial: 242, format: "", flag: `
+`,
+  },
+  {
+    name: "Congo",
+    iso2: "cg" as CountryCode,
+    dial: 242,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" >
@@ -879,8 +1341,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Costa Rica", iso2: "cr" as CountryCode, dial: 506, format: "....-....", flag: `
+`,
+  },
+  {
+    name: "Costa Rica",
+    iso2: "cr" as CountryCode,
+    dial: 506,
+    format: "....-....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -894,8 +1362,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Cote Ivoire", iso2: "ci" as CountryCode, dial: 225, format: ".. .. .. ..", flag: `
+`,
+  },
+  {
+    name: "Cote Ivoire",
+    iso2: "ci" as CountryCode,
+    dial: 225,
+    format: ".. .. .. ..",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -907,8 +1381,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Croatia", iso2: "hr" as CountryCode, dial: 385, format: "", flag: `
+`,
+  },
+  {
+    name: "Croatia",
+    iso2: "hr" as CountryCode,
+    dial: 385,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -946,8 +1426,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Cuba", iso2: "cu" as CountryCode, dial: 53, format: "", flag: `
+`,
+  },
+  {
+    name: "Cuba",
+    iso2: "cu" as CountryCode,
+    dial: 53,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -969,8 +1455,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Curacao", iso2: "cw" as CountryCode, dial: 599, format: "", flag: `
+`,
+  },
+  {
+    name: "Curacao",
+    iso2: "cw" as CountryCode,
+    dial: 599,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -988,8 +1480,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Cyprus", iso2: "cy" as CountryCode, dial: 357, format: ".. ......", flag: `
+`,
+  },
+  {
+    name: "Cyprus",
+    iso2: "cy" as CountryCode,
+    dial: 357,
+    format: ".. ......",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1005,8 +1503,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Czech Republic", iso2: "cz" as CountryCode, dial: 420, format: "... ... ...", flag: `
+`,
+  },
+  {
+    name: "Czech Republic",
+    iso2: "cz" as CountryCode,
+    dial: 420,
+    format: "... ... ...",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1019,8 +1523,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Denmark", iso2: "dk" as CountryCode, dial: 45, format: ".. .. .. ..", flag: `
+`,
+  },
+  {
+    name: "Denmark",
+    iso2: "dk" as CountryCode,
+    dial: 45,
+    format: ".. .. .. ..",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1037,8 +1547,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Djibouti", iso2: "dj" as CountryCode, dial: 253, format: "", flag: `
+`,
+  },
+  {
+    name: "Djibouti",
+    iso2: "dj" as CountryCode,
+    dial: 253,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1054,8 +1570,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Dominica", iso2: "dm" as CountryCode, dial: 1767, format: "", flag: `
+`,
+  },
+  {
+    name: "Dominica",
+    iso2: "dm" as CountryCode,
+    dial: 1767,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1108,8 +1630,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Dominican Republic", iso2: "do" as CountryCode, dial: 1, format: "", flag: `
+`,
+  },
+  {
+    name: "Dominican Republic",
+    iso2: "do" as CountryCode,
+    dial: 1,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1127,8 +1655,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Ecuador", iso2: "ec" as CountryCode, dial: 593, format: "", flag: `
+`,
+  },
+  {
+    name: "Ecuador",
+    iso2: "ec" as CountryCode,
+    dial: 593,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1147,8 +1681,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Egypt", iso2: "eg" as CountryCode, dial: 20, format: "", flag: `
+`,
+  },
+  {
+    name: "Egypt",
+    iso2: "eg" as CountryCode,
+    dial: 20,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1163,8 +1703,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "El Salvador", iso2: "sv" as CountryCode, dial: 503, format: "....-....", flag: `
+`,
+  },
+  {
+    name: "El Salvador",
+    iso2: "sv" as CountryCode,
+    dial: 503,
+    format: "....-....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1183,8 +1729,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Equatorial Guinea", iso2: "gq" as CountryCode, dial: 240, format: "", flag: `
+`,
+  },
+  {
+    name: "Equatorial Guinea",
+    iso2: "gq" as CountryCode,
+    dial: 240,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1205,8 +1757,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Eritrea", iso2: "er" as CountryCode, dial: 291, format: "", flag: `
+`,
+  },
+  {
+    name: "Eritrea",
+    iso2: "er" as CountryCode,
+    dial: 291,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1225,8 +1783,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Estonia", iso2: "ee" as CountryCode, dial: 372, format: ".... ......", flag: `
+`,
+  },
+  {
+    name: "Estonia",
+    iso2: "ee" as CountryCode,
+    dial: 372,
+    format: ".... ......",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1238,8 +1802,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Ethiopia", iso2: "et" as CountryCode, dial: 251, format: "", flag: `
+`,
+  },
+  {
+    name: "Ethiopia",
+    iso2: "et" as CountryCode,
+    dial: 251,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1259,8 +1829,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Fiji", iso2: "fj" as CountryCode, dial: 679, format: "", flag: `
+`,
+  },
+  {
+    name: "Fiji",
+    iso2: "fj" as CountryCode,
+    dial: 679,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1288,8 +1864,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Finland", iso2: "fi" as CountryCode, dial: 358, format: ".. ... .. ..", flag: `
+`,
+  },
+  {
+    name: "Finland",
+    iso2: "fi" as CountryCode,
+    dial: 358,
+    format: ".. ... .. ..",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1301,8 +1883,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "France", iso2: "fr" as CountryCode, dial: 33, format: ". .. .. .. ..", flag: `
+`,
+  },
+  {
+    name: "France",
+    iso2: "fr" as CountryCode,
+    dial: 33,
+    format: ". .. .. .. ..",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1313,8 +1901,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "French Polynesia", iso2: "pf" as CountryCode, dial: 689, format: "", flag: `
+`,
+  },
+  {
+    name: "French Polynesia",
+    iso2: "pf" as CountryCode,
+    dial: 689,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1334,8 +1928,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Gabon", iso2: "ga" as CountryCode, dial: 241, format: "", flag: `
+`,
+  },
+  {
+    name: "Gabon",
+    iso2: "ga" as CountryCode,
+    dial: 241,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1347,8 +1947,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Gambia", iso2: "gm" as CountryCode, dial: 220, format: "", flag: `
+`,
+  },
+  {
+    name: "Gambia",
+    iso2: "gm" as CountryCode,
+    dial: 220,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1361,8 +1967,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Georgia", iso2: "ge" as CountryCode, dial: 995, format: "", flag: `
+`,
+  },
+  {
+    name: "Georgia",
+    iso2: "ge" as CountryCode,
+    dial: 995,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1384,8 +1996,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Germany", iso2: "de" as CountryCode, dial: 49, format: ".... ........", flag: `
+`,
+  },
+  {
+    name: "Germany",
+    iso2: "de" as CountryCode,
+    dial: 49,
+    format: ".... ........",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1398,8 +2016,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Ghana", iso2: "gh" as CountryCode, dial: 233, format: "", flag: `
+`,
+  },
+  {
+    name: "Ghana",
+    iso2: "gh" as CountryCode,
+    dial: 233,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1413,8 +2037,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Greece", iso2: "gr" as CountryCode, dial: 30, format: "", flag: `
+`,
+  },
+  {
+    name: "Greece",
+    iso2: "gr" as CountryCode,
+    dial: 30,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1432,8 +2062,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Grenada", iso2: "gd" as CountryCode, dial: 1473, format: "", flag: `
+`,
+  },
+  {
+    name: "Grenada",
+    iso2: "gd" as CountryCode,
+    dial: 1473,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1477,8 +2113,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Guam", iso2: "gu" as CountryCode, dial: 1671, format: "", flag: `
+`,
+  },
+  {
+    name: "Guam",
+    iso2: "gu" as CountryCode,
+    dial: 1671,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1503,8 +2145,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Guatemala", iso2: "gt" as CountryCode, dial: 502, format: "....-....", flag: `
+`,
+  },
+  {
+    name: "Guatemala",
+    iso2: "gt" as CountryCode,
+    dial: 502,
+    format: "....-....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1524,8 +2172,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Guinea", iso2: "gn" as CountryCode, dial: 224, format: "", flag: `
+`,
+  },
+  {
+    name: "Guinea",
+    iso2: "gn" as CountryCode,
+    dial: 224,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1537,8 +2191,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Guinea-Bissau", iso2: "gw" as CountryCode, dial: 245, format: "", flag: `
+`,
+  },
+  {
+    name: "Guinea-Bissau",
+    iso2: "gw" as CountryCode,
+    dial: 245,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1556,8 +2216,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Guyana", iso2: "gy" as CountryCode, dial: 592, format: "", flag: `
+`,
+  },
+  {
+    name: "Guyana",
+    iso2: "gy" as CountryCode,
+    dial: 592,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1577,8 +2243,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Haiti", iso2: "ht" as CountryCode, dial: 509, format: "....-....", flag: `
+`,
+  },
+  {
+    name: "Haiti",
+    iso2: "ht" as CountryCode,
+    dial: 509,
+    format: "....-....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1594,8 +2266,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Honduras", iso2: "hn" as CountryCode, dial: 504, format: "", flag: `
+`,
+  },
+  {
+    name: "Honduras",
+    iso2: "hn" as CountryCode,
+    dial: 504,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1617,8 +2295,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Hong Kong", iso2: "hk" as CountryCode, dial: 852, format: ".... ....", flag: `
+`,
+  },
+  {
+    name: "Hong Kong",
+    iso2: "hk" as CountryCode,
+    dial: 852,
+    format: ".... ....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1640,8 +2324,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Hungary", iso2: "hu" as CountryCode, dial: 36, format: "", flag: `
+`,
+  },
+  {
+    name: "Hungary",
+    iso2: "hu" as CountryCode,
+    dial: 36,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1653,8 +2343,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Iceland", iso2: "is" as CountryCode, dial: 354, format: "... ....", flag: `
+`,
+  },
+  {
+    name: "Iceland",
+    iso2: "is" as CountryCode,
+    dial: 354,
+    format: "... ....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1674,8 +2370,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "India", iso2: "in" as CountryCode, dial: 91, format: ".....-.....", flag: `
+`,
+  },
+  {
+    name: "India",
+    iso2: "in" as CountryCode,
+    dial: 91,
+    format: ".....-.....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1690,8 +2392,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Indonesia", iso2: "id" as CountryCode, dial: 62, format: "", flag: `
+`,
+  },
+  {
+    name: "Indonesia",
+    iso2: "id" as CountryCode,
+    dial: 62,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1701,8 +2409,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Iran", iso2: "ir" as CountryCode, dial: 98, format: "... ... ....", flag: `
+`,
+  },
+  {
+    name: "Iran",
+    iso2: "ir" as CountryCode,
+    dial: 98,
+    format: "... ... ....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1721,8 +2435,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Iraq", iso2: "iq" as CountryCode, dial: 964, format: "", flag: `
+`,
+  },
+  {
+    name: "Iraq",
+    iso2: "iq" as CountryCode,
+    dial: 964,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1742,8 +2462,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Ireland", iso2: "ie" as CountryCode, dial: 353, format: ".. .......", flag: `
+`,
+  },
+  {
+    name: "Ireland",
+    iso2: "ie" as CountryCode,
+    dial: 353,
+    format: ".. .......",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1754,8 +2480,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Israel", iso2: "il" as CountryCode, dial: 972, format: "... ... ....", flag: `
+`,
+  },
+  {
+    name: "Israel",
+    iso2: "il" as CountryCode,
+    dial: 972,
+    format: "... ... ....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1774,8 +2506,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Italy", iso2: "it" as CountryCode, dial: 39, format: "... .......", flag: `
+`,
+  },
+  {
+    name: "Italy",
+    iso2: "it" as CountryCode,
+    dial: 39,
+    format: "... .......",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1786,8 +2524,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Jamaica", iso2: "jm" as CountryCode, dial: 1876, format: "", flag: `
+`,
+  },
+  {
+    name: "Jamaica",
+    iso2: "jm" as CountryCode,
+    dial: 1876,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1802,8 +2546,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Japan", iso2: "jp" as CountryCode, dial: 81, format: ".. .... ....", flag: `
+`,
+  },
+  {
+    name: "Japan",
+    iso2: "jp" as CountryCode,
+    dial: 81,
+    format: ".. .... ....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1813,8 +2563,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Jordan", iso2: "jo" as CountryCode, dial: 962, format: "", flag: `
+`,
+  },
+  {
+    name: "Jordan",
+    iso2: "jo" as CountryCode,
+    dial: 962,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1831,8 +2587,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Kazakhstan", iso2: "kz" as CountryCode, dial: 7, format: "... ...-..-..", flag: `
+`,
+  },
+  {
+    name: "Kazakhstan",
+    iso2: "kz" as CountryCode,
+    dial: 7,
+    format: "... ...-..-..",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1849,8 +2611,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Kenya", iso2: "ke" as CountryCode, dial: 254, format: "", flag: `
+`,
+  },
+  {
+    name: "Kenya",
+    iso2: "ke" as CountryCode,
+    dial: 254,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1876,8 +2644,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Kiribati", iso2: "ki" as CountryCode, dial: 686, format: "", flag: `
+`,
+  },
+  {
+    name: "Kiribati",
+    iso2: "ki" as CountryCode,
+    dial: 686,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1932,8 +2706,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Kosovo", iso2: "xk" as CountryCode, dial: 383, format: "", flag: `
+`,
+  },
+  {
+    name: "Kosovo",
+    iso2: "xk" as CountryCode,
+    dial: 383,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1959,8 +2739,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Kuwait", iso2: "kw" as CountryCode, dial: 965, format: "", flag: `
+`,
+  },
+  {
+    name: "Kuwait",
+    iso2: "kw" as CountryCode,
+    dial: 965,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1973,8 +2759,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Kyrgyzstan", iso2: "kg" as CountryCode, dial: 996, format: "... ... ...", flag: `
+`,
+  },
+  {
+    name: "Kyrgyzstan",
+    iso2: "kg" as CountryCode,
+    dial: 996,
+    format: "... ... ...",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -1996,8 +2788,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Laos", iso2: "la" as CountryCode, dial: 856, format: "", flag: `
+`,
+  },
+  {
+    name: "Laos",
+    iso2: "la" as CountryCode,
+    dial: 856,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2014,8 +2812,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Latvia", iso2: "lv" as CountryCode, dial: 371, format: ".. ... ...", flag: `
+`,
+  },
+  {
+    name: "Latvia",
+    iso2: "lv" as CountryCode,
+    dial: 371,
+    format: ".. ... ...",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2027,8 +2831,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Lebanon", iso2: "lb" as CountryCode, dial: 961, format: "", flag: `
+`,
+  },
+  {
+    name: "Lebanon",
+    iso2: "lb" as CountryCode,
+    dial: 961,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2043,8 +2853,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Lesotho", iso2: "ls" as CountryCode, dial: 266, format: "", flag: `
+`,
+  },
+  {
+    name: "Lesotho",
+    iso2: "ls" as CountryCode,
+    dial: 266,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2058,8 +2874,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Liberia", iso2: "lr" as CountryCode, dial: 231, format: "", flag: `
+`,
+  },
+  {
+    name: "Liberia",
+    iso2: "lr" as CountryCode,
+    dial: 231,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2093,8 +2915,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Libya", iso2: "ly" as CountryCode, dial: 218, format: "", flag: `
+`,
+  },
+  {
+    name: "Libya",
+    iso2: "ly" as CountryCode,
+    dial: 218,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2113,8 +2941,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Liechtenstein", iso2: "li" as CountryCode, dial: 423, format: "", flag: `
+`,
+  },
+  {
+    name: "Liechtenstein",
+    iso2: "li" as CountryCode,
+    dial: 423,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2128,8 +2962,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Lithuania", iso2: "lt" as CountryCode, dial: 370, format: "", flag: `
+`,
+  },
+  {
+    name: "Lithuania",
+    iso2: "lt" as CountryCode,
+    dial: 370,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2141,8 +2981,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Luxembourg", iso2: "lu" as CountryCode, dial: 352, format: "", flag: `
+`,
+  },
+  {
+    name: "Luxembourg",
+    iso2: "lu" as CountryCode,
+    dial: 352,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2153,8 +2999,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Macedonia", iso2: "mk" as CountryCode, dial: 389, format: "", flag: `
+`,
+  },
+  {
+    name: "Macedonia",
+    iso2: "mk" as CountryCode,
+    dial: 389,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2175,8 +3027,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Madagascar", iso2: "mg" as CountryCode, dial: 261, format: "", flag: `
+`,
+  },
+  {
+    name: "Madagascar",
+    iso2: "mg" as CountryCode,
+    dial: 261,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2189,8 +3047,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Malawi", iso2: "mw" as CountryCode, dial: 265, format: "", flag: `
+`,
+  },
+  {
+    name: "Malawi",
+    iso2: "mw" as CountryCode,
+    dial: 265,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2204,8 +3068,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Malaysia", iso2: "my" as CountryCode, dial: 60, format: "..-....-....", flag: `
+`,
+  },
+  {
+    name: "Malaysia",
+    iso2: "my" as CountryCode,
+    dial: 60,
+    format: "..-....-....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2229,8 +3099,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Maldives", iso2: "mv" as CountryCode, dial: 960, format: "", flag: `
+`,
+  },
+  {
+    name: "Maldives",
+    iso2: "mv" as CountryCode,
+    dial: 960,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2243,8 +3119,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Mali", iso2: "ml" as CountryCode, dial: 223, format: "", flag: `
+`,
+  },
+  {
+    name: "Mali",
+    iso2: "ml" as CountryCode,
+    dial: 223,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2256,8 +3138,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Malta", iso2: "mt" as CountryCode, dial: 356, format: "", flag: `
+`,
+  },
+  {
+    name: "Malta",
+    iso2: "mt" as CountryCode,
+    dial: 356,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2269,8 +3157,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Marshall Islands", iso2: "mh" as CountryCode, dial: 692, format: "", flag: `
+`,
+  },
+  {
+    name: "Marshall Islands",
+    iso2: "mh" as CountryCode,
+    dial: 692,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2287,8 +3181,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Martinique", iso2: "mq" as CountryCode, dial: 596, format: "", flag: `
+`,
+  },
+  {
+    name: "Martinique",
+    iso2: "mq" as CountryCode,
+    dial: 596,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2327,8 +3227,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Mauritania", iso2: "mr" as CountryCode, dial: 222, format: "", flag: `
+`,
+  },
+  {
+    name: "Mauritania",
+    iso2: "mr" as CountryCode,
+    dial: 222,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2343,8 +3249,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Mauritius", iso2: "mu" as CountryCode, dial: 230, format: "", flag: `
+`,
+  },
+  {
+    name: "Mauritius",
+    iso2: "mu" as CountryCode,
+    dial: 230,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2359,8 +3271,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Mexico", iso2: "mx" as CountryCode, dial: 52, format: "... ... ....", flag: `
+`,
+  },
+  {
+    name: "Mexico",
+    iso2: "mx" as CountryCode,
+    dial: 52,
+    format: "... ... ....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2379,8 +3297,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Micronesia", iso2: "fm" as CountryCode, dial: 691, format: "", flag: `
+`,
+  },
+  {
+    name: "Micronesia",
+    iso2: "fm" as CountryCode,
+    dial: 691,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2398,8 +3322,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Moldova", iso2: "md" as CountryCode, dial: 373, format: "(..) ..-..-..", flag: `
+`,
+  },
+  {
+    name: "Moldova",
+    iso2: "md" as CountryCode,
+    dial: 373,
+    format: "(..) ..-..-..",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2418,8 +3348,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Monaco", iso2: "mc" as CountryCode, dial: 377, format: "", flag: `
+`,
+  },
+  {
+    name: "Monaco",
+    iso2: "mc" as CountryCode,
+    dial: 377,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2429,8 +3365,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Mongolia", iso2: "mn" as CountryCode, dial: 976, format: "", flag: `
+`,
+  },
+  {
+    name: "Mongolia",
+    iso2: "mn" as CountryCode,
+    dial: 976,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2452,8 +3394,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Montenegro", iso2: "me" as CountryCode, dial: 382, format: "", flag: `
+`,
+  },
+  {
+    name: "Montenegro",
+    iso2: "me" as CountryCode,
+    dial: 382,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2478,8 +3426,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Morocco", iso2: "ma" as CountryCode, dial: 212, format: "", flag: `
+`,
+  },
+  {
+    name: "Morocco",
+    iso2: "ma" as CountryCode,
+    dial: 212,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2493,8 +3447,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Mozambique", iso2: "mz" as CountryCode, dial: 258, format: "", flag: `
+`,
+  },
+  {
+    name: "Mozambique",
+    iso2: "mz" as CountryCode,
+    dial: 258,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2516,8 +3476,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Myanmar", iso2: "mm" as CountryCode, dial: 95, format: "", flag: `
+`,
+  },
+  {
+    name: "Myanmar",
+    iso2: "mm" as CountryCode,
+    dial: 95,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2531,8 +3497,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Namibia", iso2: "na" as CountryCode, dial: 264, format: "", flag: `
+`,
+  },
+  {
+    name: "Namibia",
+    iso2: "na" as CountryCode,
+    dial: 264,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2551,8 +3523,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Nauru", iso2: "nr" as CountryCode, dial: 674, format: "", flag: `
+`,
+  },
+  {
+    name: "Nauru",
+    iso2: "nr" as CountryCode,
+    dial: 674,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2569,8 +3547,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Nepal", iso2: "np" as CountryCode, dial: 977, format: "", flag: `
+`,
+  },
+  {
+    name: "Nepal",
+    iso2: "np" as CountryCode,
+    dial: 977,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2594,8 +3578,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Netherlands", iso2: "nl" as CountryCode, dial: 31, format: ".. ........", flag: `
+`,
+  },
+  {
+    name: "Netherlands",
+    iso2: "nl" as CountryCode,
+    dial: 31,
+    format: ".. ........",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2606,8 +3596,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "New Zealand", iso2: "nz" as CountryCode, dial: 64, format: "...-...-....", flag: `
+`,
+  },
+  {
+    name: "New Zealand",
+    iso2: "nz" as CountryCode,
+    dial: 64,
+    format: "...-...-....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2635,8 +3631,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Nicaragua", iso2: "ni" as CountryCode, dial: 505, format: "", flag: `
+`,
+  },
+  {
+    name: "Nicaragua",
+    iso2: "ni" as CountryCode,
+    dial: 505,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2655,8 +3657,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Niger", iso2: "ne" as CountryCode, dial: 227, format: "", flag: `
+`,
+  },
+  {
+    name: "Niger",
+    iso2: "ne" as CountryCode,
+    dial: 227,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2670,8 +3678,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Nigeria", iso2: "ng" as CountryCode, dial: 234, format: "", flag: `
+`,
+  },
+  {
+    name: "Nigeria",
+    iso2: "ng" as CountryCode,
+    dial: 234,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2683,8 +3697,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "North Korea", iso2: "kp" as CountryCode, dial: 850, format: "", flag: `
+`,
+  },
+  {
+    name: "North Korea",
+    iso2: "kp" as CountryCode,
+    dial: 850,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2702,8 +3722,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Norway", iso2: "no" as CountryCode, dial: 47, format: "... .. ...", flag: `
+`,
+  },
+  {
+    name: "Norway",
+    iso2: "no" as CountryCode,
+    dial: 47,
+    format: "... .. ...",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2723,8 +3749,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Oman", iso2: "om" as CountryCode, dial: 968, format: "", flag: `
+`,
+  },
+  {
+    name: "Oman",
+    iso2: "om" as CountryCode,
+    dial: 968,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2742,8 +3774,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Pakistan", iso2: "pk" as CountryCode, dial: 92, format: "...-.......", flag: `
+`,
+  },
+  {
+    name: "Pakistan",
+    iso2: "pk" as CountryCode,
+    dial: 92,
+    format: "...-.......",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2764,8 +3802,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Palau", iso2: "pw" as CountryCode, dial: 680, format: "", flag: `
+`,
+  },
+  {
+    name: "Palau",
+    iso2: "pw" as CountryCode,
+    dial: 680,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2775,8 +3819,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Palestine", iso2: "ps" as CountryCode, dial: 970, format: "", flag: `
+`,
+  },
+  {
+    name: "Palestine",
+    iso2: "ps" as CountryCode,
+    dial: 970,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2790,8 +3840,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Panama", iso2: "pa" as CountryCode, dial: 507, format: "", flag: `
+`,
+  },
+  {
+    name: "Panama",
+    iso2: "pa" as CountryCode,
+    dial: 507,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2806,8 +3862,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Papua New Guinea", iso2: "pg" as CountryCode, dial: 675, format: "", flag: `
+`,
+  },
+  {
+    name: "Papua New Guinea",
+    iso2: "pg" as CountryCode,
+    dial: 675,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2839,8 +3901,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Paraguay", iso2: "py" as CountryCode, dial: 595, format: "", flag: `
+`,
+  },
+  {
+    name: "Paraguay",
+    iso2: "py" as CountryCode,
+    dial: 595,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2857,8 +3925,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Peru", iso2: "pe" as CountryCode, dial: 51, format: "", flag: `
+`,
+  },
+  {
+    name: "Peru",
+    iso2: "pe" as CountryCode,
+    dial: 51,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2870,8 +3944,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Philippines", iso2: "ph" as CountryCode, dial: 63, format: ".... .......", flag: `
+`,
+  },
+  {
+    name: "Philippines",
+    iso2: "ph" as CountryCode,
+    dial: 63,
+    format: ".... .......",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2894,8 +3974,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Poland", iso2: "pl" as CountryCode, dial: 48, format: "...-...-...", flag: `
+`,
+  },
+  {
+    name: "Poland",
+    iso2: "pl" as CountryCode,
+    dial: 48,
+    format: "...-...-...",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2905,8 +3991,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Portugal", iso2: "pt" as CountryCode, dial: 351, format: "", flag: `
+`,
+  },
+  {
+    name: "Portugal",
+    iso2: "pt" as CountryCode,
+    dial: 351,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2923,8 +4015,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Puerto Rico", iso2: "pr" as CountryCode, dial: 1, format: "", flag: `
+`,
+  },
+  {
+    name: "Puerto Rico",
+    iso2: "pr" as CountryCode,
+    dial: 1,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2943,8 +4041,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Qatar", iso2: "qa" as CountryCode, dial: 974, format: "", flag: `
+`,
+  },
+  {
+    name: "Qatar",
+    iso2: "qa" as CountryCode,
+    dial: 974,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2957,8 +4061,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Romania", iso2: "ro" as CountryCode, dial: 40, format: "", flag: `
+`,
+  },
+  {
+    name: "Romania",
+    iso2: "ro" as CountryCode,
+    dial: 40,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2973,8 +4083,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Russia", iso2: "ru" as CountryCode, dial: 7, format: "(...) ...-..-..", flag: `
+`,
+  },
+  {
+    name: "Russia",
+    iso2: "ru" as CountryCode,
+    dial: 7,
+    format: "(...) ...-..-..",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -2986,8 +4102,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Rwanda", iso2: "rw" as CountryCode, dial: 250, format: "", flag: `
+`,
+  },
+  {
+    name: "Rwanda",
+    iso2: "rw" as CountryCode,
+    dial: 250,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3003,8 +4125,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Saint Kitts and Nevis", iso2: "kn" as CountryCode, dial: 1869, format: "", flag: `
+`,
+  },
+  {
+    name: "Saint Kitts and Nevis",
+    iso2: "kn" as CountryCode,
+    dial: 1869,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" >
@@ -3024,8 +4152,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Samoa", iso2: "ws" as CountryCode, dial: 685, format: "", flag: `
+`,
+  },
+  {
+    name: "Samoa",
+    iso2: "ws" as CountryCode,
+    dial: 685,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3047,8 +4181,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "San Marino", iso2: "sm" as CountryCode, dial: 378, format: "", flag: `
+`,
+  },
+  {
+    name: "San Marino",
+    iso2: "sm" as CountryCode,
+    dial: 378,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3072,8 +4212,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Sao Tome and Principe", iso2: "st" as CountryCode, dial: 239, format: "", flag: `
+`,
+  },
+  {
+    name: "Sao Tome and Principe",
+    iso2: "st" as CountryCode,
+    dial: 239,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3094,8 +4240,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Saudi Arabia", iso2: "sa" as CountryCode, dial: 966, format: "", flag: `
+`,
+  },
+  {
+    name: "Saudi Arabia",
+    iso2: "sa" as CountryCode,
+    dial: 966,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3117,8 +4269,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Senegal", iso2: "sn" as CountryCode, dial: 221, format: "", flag: `
+`,
+  },
+  {
+    name: "Senegal",
+    iso2: "sn" as CountryCode,
+    dial: 221,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3134,8 +4292,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Serbia", iso2: "rs" as CountryCode, dial: 381, format: "", flag: `
+`,
+  },
+  {
+    name: "Serbia",
+    iso2: "rs" as CountryCode,
+    dial: 381,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3162,8 +4326,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Seychelles", iso2: "sc" as CountryCode, dial: 248, format: "", flag: `
+`,
+  },
+  {
+    name: "Seychelles",
+    iso2: "sc" as CountryCode,
+    dial: 248,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3179,8 +4349,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Sierra Leone", iso2: "sl" as CountryCode, dial: 232, format: "", flag: `
+`,
+  },
+  {
+    name: "Sierra Leone",
+    iso2: "sl" as CountryCode,
+    dial: 232,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3192,8 +4368,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Singapore", iso2: "sg" as CountryCode, dial: 65, format: "....-....", flag: `
+`,
+  },
+  {
+    name: "Singapore",
+    iso2: "sg" as CountryCode,
+    dial: 65,
+    format: "....-....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3217,8 +4399,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Slovakia", iso2: "sk" as CountryCode, dial: 421, format: "", flag: `
+`,
+  },
+  {
+    name: "Slovakia",
+    iso2: "sk" as CountryCode,
+    dial: 421,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3241,8 +4429,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Slovenia", iso2: "si" as CountryCode, dial: 386, format: "", flag: `
+`,
+  },
+  {
+    name: "Slovenia",
+    iso2: "si" as CountryCode,
+    dial: 386,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3256,8 +4450,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Solomon Islands", iso2: "sb" as CountryCode, dial: 677, format: "", flag: `
+`,
+  },
+  {
+    name: "Solomon Islands",
+    iso2: "sb" as CountryCode,
+    dial: 677,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" >
@@ -3283,8 +4483,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Somalia", iso2: "so" as CountryCode, dial: 252, format: "", flag: `
+`,
+  },
+  {
+    name: "Somalia",
+    iso2: "so" as CountryCode,
+    dial: 252,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3295,8 +4501,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "South Africa", iso2: "za" as CountryCode, dial: 27, format: "", flag: `
+`,
+  },
+  {
+    name: "South Africa",
+    iso2: "za" as CountryCode,
+    dial: 27,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3315,8 +4527,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "South Korea", iso2: "kr" as CountryCode, dial: 82, format: "... .... ....", flag: `
+`,
+  },
+  {
+    name: "South Korea",
+    iso2: "kr" as CountryCode,
+    dial: 82,
+    format: "... .... ....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3346,8 +4564,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "South Sudan", iso2: "ss" as CountryCode, dial: 211, format: "", flag: `
+`,
+  },
+  {
+    name: "South Sudan",
+    iso2: "ss" as CountryCode,
+    dial: 211,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3366,8 +4590,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Spain", iso2: "es" as CountryCode, dial: 34, format: "... ... ...", flag: `
+`,
+  },
+  {
+    name: "Spain",
+    iso2: "es" as CountryCode,
+    dial: 34,
+    format: "... ... ...",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3380,8 +4610,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Sri Lanka", iso2: "lk" as CountryCode, dial: 94, format: "", flag: `
+`,
+  },
+  {
+    name: "Sri Lanka",
+    iso2: "lk" as CountryCode,
+    dial: 94,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" >
@@ -3402,8 +4638,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Sudan", iso2: "sd" as CountryCode, dial: 249, format: "", flag: `
+`,
+  },
+  {
+    name: "Sudan",
+    iso2: "sd" as CountryCode,
+    dial: 249,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3417,8 +4659,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Suriname", iso2: "sr" as CountryCode, dial: 597, format: "", flag: `
+`,
+  },
+  {
+    name: "Suriname",
+    iso2: "sr" as CountryCode,
+    dial: 597,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3437,8 +4685,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Swaziland", iso2: "sz" as CountryCode, dial: 268, format: "", flag: `
+`,
+  },
+  {
+    name: "Swaziland",
+    iso2: "sz" as CountryCode,
+    dial: 268,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3464,8 +4718,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Sweden", iso2: "se" as CountryCode, dial: 46, format: "(...) ...-...", flag: `
+`,
+  },
+  {
+    name: "Sweden",
+    iso2: "se" as CountryCode,
+    dial: 46,
+    format: "(...) ...-...",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3482,8 +4742,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Switzerland", iso2: "ch" as CountryCode, dial: 41, format: ".. ... .. ..", flag: `
+`,
+  },
+  {
+    name: "Switzerland",
+    iso2: "ch" as CountryCode,
+    dial: 41,
+    format: ".. ... .. ..",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3494,8 +4760,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Syria", iso2: "sy" as CountryCode, dial: 963, format: "", flag: `
+`,
+  },
+  {
+    name: "Syria",
+    iso2: "sy" as CountryCode,
+    dial: 963,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3511,8 +4783,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Taiwan", iso2: "tw" as CountryCode, dial: 886, format: "", flag: `
+`,
+  },
+  {
+    name: "Taiwan",
+    iso2: "tw" as CountryCode,
+    dial: 886,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3529,8 +4807,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Tajikistan", iso2: "tj" as CountryCode, dial: 992, format: "", flag: `
+`,
+  },
+  {
+    name: "Tajikistan",
+    iso2: "tj" as CountryCode,
+    dial: 992,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3559,8 +4843,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Tanzania", iso2: "tz" as CountryCode, dial: 255, format: "", flag: `
+`,
+  },
+  {
+    name: "Tanzania",
+    iso2: "tz" as CountryCode,
+    dial: 255,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3575,8 +4865,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Thailand", iso2: "th" as CountryCode, dial: 66, format: "", flag: `
+`,
+  },
+  {
+    name: "Thailand",
+    iso2: "th" as CountryCode,
+    dial: 66,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3590,8 +4886,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Togo", iso2: "tg" as CountryCode, dial: 228, format: "", flag: `
+`,
+  },
+  {
+    name: "Togo",
+    iso2: "tg" as CountryCode,
+    dial: 228,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3610,8 +4912,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Tonga", iso2: "to" as CountryCode, dial: 676, format: "", flag: `
+`,
+  },
+  {
+    name: "Tonga",
+    iso2: "to" as CountryCode,
+    dial: 676,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3625,8 +4933,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Trinidad and Tobago", iso2: "tt" as CountryCode, dial: 1868, format: "", flag: `
+`,
+  },
+  {
+    name: "Trinidad and Tobago",
+    iso2: "tt" as CountryCode,
+    dial: 1868,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3644,8 +4958,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Tunisia", iso2: "tn" as CountryCode, dial: 216, format: "", flag: `
+`,
+  },
+  {
+    name: "Tunisia",
+    iso2: "tn" as CountryCode,
+    dial: 216,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3661,8 +4981,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Turkey", iso2: "tr" as CountryCode, dial: 90, format: "... ... .. ..", flag: `
+`,
+  },
+  {
+    name: "Turkey",
+    iso2: "tr" as CountryCode,
+    dial: 90,
+    format: "... ... .. ..",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3677,8 +5003,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Turkmenistan", iso2: "tm" as CountryCode, dial: 993, format: "", flag: `
+`,
+  },
+  {
+    name: "Turkmenistan",
+    iso2: "tm" as CountryCode,
+    dial: 993,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3732,8 +5064,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Tuvalu", iso2: "tv" as CountryCode, dial: 688, format: "", flag: `
+`,
+  },
+  {
+    name: "Tuvalu",
+    iso2: "tv" as CountryCode,
+    dial: 688,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3775,8 +5113,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Uganda", iso2: "ug" as CountryCode, dial: 256, format: "", flag: `
+`,
+  },
+  {
+    name: "Uganda",
+    iso2: "ug" as CountryCode,
+    dial: 256,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3798,8 +5142,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Ukraine", iso2: "ua" as CountryCode, dial: 380, format: "(..) ... .. ..", flag: `
+`,
+  },
+  {
+    name: "Ukraine",
+    iso2: "ua" as CountryCode,
+    dial: 380,
+    format: "(..) ... .. ..",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3809,8 +5159,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "United Arab Emirates", iso2: "ae" as CountryCode, dial: 971, format: "", flag: `
+`,
+  },
+  {
+    name: "United Arab Emirates",
+    iso2: "ae" as CountryCode,
+    dial: 971,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3823,8 +5179,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "United Kingdom", iso2: "gb" as CountryCode, dial: 44, format: ".... ......", flag: `
+`,
+  },
+  {
+    name: "United Kingdom",
+    iso2: "gb" as CountryCode,
+    dial: 44,
+    format: ".... ......",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3856,8 +5218,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "United States", iso2: "us" as CountryCode, dial: 1, format: "(...) ...-....", flag: `
+`,
+  },
+  {
+    name: "United States",
+    iso2: "us" as CountryCode,
+    dial: 1,
+    format: "(...) ...-....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3883,8 +5251,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Uruguay", iso2: "uy" as CountryCode, dial: 598, format: "", flag: `
+`,
+  },
+  {
+    name: "Uruguay",
+    iso2: "uy" as CountryCode,
+    dial: 598,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3907,8 +5281,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Uzbekistan", iso2: "uz" as CountryCode, dial: 998, format: ".. ... .. ..", flag: `
+`,
+  },
+  {
+    name: "Uzbekistan",
+    iso2: "uz" as CountryCode,
+    dial: 998,
+    format: ".. ... .. ..",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -3957,8 +5337,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Vanuatu", iso2: "vu" as CountryCode, dial: 678, format: "", flag: `
+`,
+  },
+  {
+    name: "Vanuatu",
+    iso2: "vu" as CountryCode,
+    dial: 678,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" >
@@ -4008,8 +5394,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Vatican City", iso2: "va" as CountryCode, dial: 39, format: ".. .... ....", flag: `
+`,
+  },
+  {
+    name: "Vatican City",
+    iso2: "va" as CountryCode,
+    dial: 39,
+    format: ".. .... ....",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -4028,8 +5420,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Venezuela", iso2: "ve" as CountryCode, dial: 58, format: "", flag: `
+`,
+  },
+  {
+    name: "Venezuela",
+    iso2: "ve" as CountryCode,
+    dial: 58,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -4059,8 +5457,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Vietnam", iso2: "vn" as CountryCode, dial: 84, format: "", flag: `
+`,
+  },
+  {
+    name: "Vietnam",
+    iso2: "vn" as CountryCode,
+    dial: 84,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -4071,8 +5475,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Yemen", iso2: "ye" as CountryCode, dial: 967, format: "", flag: `
+`,
+  },
+  {
+    name: "Yemen",
+    iso2: "ye" as CountryCode,
+    dial: 967,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -4083,8 +5493,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Zambia", iso2: "zm" as CountryCode, dial: 260, format: "", flag: `
+`,
+  },
+  {
+    name: "Zambia",
+    iso2: "zm" as CountryCode,
+    dial: 260,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -4100,8 +5516,14 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`},
-{name: "Zimbabwe", iso2: "zw" as CountryCode, dial: 263, format: "", flag: `
+`,
+  },
+  {
+    name: "Zimbabwe",
+    iso2: "zw" as CountryCode,
+    dial: 263,
+    format: "",
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
@@ -4133,5 +5555,6 @@ export type CountryCode = typeof countryCodes[number];
 
 </g>
 </svg>
-`}
+`,
+  },
 ];
