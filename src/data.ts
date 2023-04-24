@@ -1222,7 +1222,7 @@ export const countriesWithDial: CountryWithDialType[] = [
     iso2: "cn" as CountryCode,
     dial: 86,
     format: "..-.........",
-    flag: `<?xml version="1.0" encoding="utf-8"?>
+    flag: `
 
 <svg  x="0px" y="0px"
 	 viewBox="-49 141 512 512" style="enable-background:new -49 141 512 512;" >
