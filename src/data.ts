@@ -1,209 +1,7 @@
-const countryCodes = [
-  "AF",
-  "AL",
-  "DZ",
-  "AD",
-  "AO",
-  "AG",
-  "AR",
-  "AM",
-  "AW",
-  "AU",
-  "AT",
-  "AZ",
-  "BS",
-  "BH",
-  "BD",
-  "BB",
-  "BY",
-  "BE",
-  "BZ",
-  "BJ",
-  "BT",
-  "BO",
-  "BA",
-  "BW",
-  "BR",
-  "IO",
-  "BN",
-  "BG",
-  "BF",
-  "BI",
-  "KH",
-  "CM",
-  "CA",
-  "CV",
-  "CF",
-  "TD",
-  "CL",
-  "CN",
-  "CO",
-  "KM",
-  "CD",
-  "CG",
-  "CR",
-  "CI",
-  "HR",
-  "CU",
-  "CW",
-  "CY",
-  "CZ",
-  "DK",
-  "DJ",
-  "DM",
-  "DO",
-  "EC",
-  "EG",
-  "SV",
-  "GQ",
-  "ER",
-  "EE",
-  "ET",
-  "FJ",
-  "FI",
-  "FR",
-  "PF",
-  "GA",
-  "GM",
-  "GE",
-  "DE",
-  "GH",
-  "GR",
-  "GD",
-  "GU",
-  "GT",
-  "GN",
-  "GW",
-  "GY",
-  "HT",
-  "HN",
-  "HK",
-  "HU",
-  "IS",
-  "IN",
-  "ID",
-  "IR",
-  "IQ",
-  "IE",
-  "IL",
-  "IT",
-  "JM",
-  "JP",
-  "JO",
-  "KZ",
-  "KE",
-  "KI",
-  "XK",
-  "KW",
-  "KG",
-  "LA",
-  "LV",
-  "LB",
-  "LS",
-  "LR",
-  "LY",
-  "LI",
-  "LT",
-  "LU",
-  "MK",
-  "MG",
-  "MW",
-  "MY",
-  "MV",
-  "ML",
-  "MT",
-  "MH",
-  "MQ",
-  "MR",
-  "MU",
-  "MX",
-  "FM",
-  "MD",
-  "MC",
-  "MN",
-  "ME",
-  "MA",
-  "MZ",
-  "MM",
-  "NA",
-  "NR",
-  "NP",
-  "NL",
-  "NZ",
-  "NI",
-  "NE",
-  "NG",
-  "KP",
-  "NO",
-  "OM",
-  "PK",
-  "PW",
-  "PS",
-  "PA",
-  "PG",
-  "PY",
-  "PE",
-  "PH",
-  "PL",
-  "PT",
-  "PR",
-  "QA",
-  "RO",
-  "RU",
-  "RW",
-  "KN",
-  "WS",
-  "SM",
-  "ST",
-  "SA",
-  "SN",
-  "RS",
-  "SC",
-  "SL",
-  "SG",
-  "SK",
-  "SI",
-  "SB",
-  "SO",
-  "ZA",
-  "KR",
-  "SS",
-  "ES",
-  "LK",
-  "SD",
-  "SR",
-  "SZ",
-  "SE",
-  "CH",
-  "SY",
-  "TW",
-  "TJ",
-  "TZ",
-  "TH",
-  "TG",
-  "TO",
-  "TT",
-  "TN",
-  "TR",
-  "TM",
-  "TV",
-  "UG",
-  "UA",
-  "AE",
-  "GB",
-  "US",
-  "UY",
-  "UZ",
-  "VU",
-  "VA",
-  "VE",
-  "VN",
-  "YE",
-  "ZM",
-  "ZW",
-] as const;
+import {Currency} from "iso-country-currency";
+const countryCodes = ["AF","AL","DZ","AD","AO","AG","AR","AM","AW","AU","AT","AZ","BS","BH","BD","BB","BY","BE","BZ","BJ","BT","BO","BA","BW","BR","IO","BN","BG","BF","BI","KH","CM","CA","CV","CF","TD","CL","CN","CO","KM","CD","CG","CR","CI","HR","CU","CW","CY","CZ","DK","DJ","DM","DO","EC","EG","SV","GQ","ER","EE","ET","FJ","FI","FR","PF","GA","GM","GE","DE","GH","GR","GD","GU","GT","GN","GW","GY","HT","HN","HK","HU","IS","IN","ID","IR","IQ","IE","IL","IT","JM","JP","JO","KZ","KE","KI","XK","KW","KG","LA","LV","LB","LS","LR","LY","LI","LT","LU","MK","MG","MW","MY","MV","ML","MT","MH","MQ","MR","MU","MX","FM","MD","MC","MN","ME","MA","MZ","MM","NA","NR","NP","NL","NZ","NI","NE","NG","KP","NO","OM","PK","PW","PS","PA","PG","PY","PE","PH","PL","PT","PR","QA","RO","RU","RW","KN","WS","SM","ST","SA","SN","RS","SC","SL","SG","SK","SI","SB","SO","ZA","KR","SS","ES","LK","SD","SR","SZ","SE","CH","SY","TW","TJ","TZ","TH","TG","TO","TT","TN","TR","TM","TV","UG","UA","AE","GB","US","UY","UZ","VU","VA","VE","VN","YE","ZM","ZW"] as const;
 export type CountryCode = typeof countryCodes[number];
-export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number; flag: string; format: string;};
+export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number; flag: string; format: string; currency: Currency};
  export const countriesWithDial: CountryWithDialType[] = [{name: "Afghanistan", iso2: "AF" as CountryCode, dial: 93, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -222,7 +20,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "AF",countryName: "Afghanistan",currency: "AFN",symbol: "Af",dateFormat: "undefined",numericCode: undefined}},
 {name: "Albania", iso2: "AL" as CountryCode, dial: 355, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -239,7 +37,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "AL",countryName: "Albania",currency: "ALL",symbol: "ALL",dateFormat: "yyyy-MM-dd",numericCode: undefined}},
 {name: "Algeria", iso2: "DZ" as CountryCode, dial: 213, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -256,7 +54,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "DZ",countryName: "Algeria",currency: "DZD",symbol: "DA",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Andorra", iso2: "AD" as CountryCode, dial: 376, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -281,7 +79,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "AD",countryName: "Andorra",currency: "EUR",symbol: "€",dateFormat: "undefined",numericCode: undefined}},
 {name: "Angola", iso2: "AO" as CountryCode, dial: 244, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -302,7 +100,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "AO",countryName: "Angola",currency: "AOA",symbol: "AOA",dateFormat: "undefined",numericCode: undefined}},
 {name: "Antigua and Barbuda", iso2: "AG" as CountryCode, dial: 1268, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -320,7 +118,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "AG",countryName: "Antigua and Barbuda",currency: "XCD",symbol: "XCD",dateFormat: "undefined",numericCode: undefined}},
 {name: "Argentina", iso2: "AR" as CountryCode, dial: 54, format: "(..) ........", flag: `
 
 <svg  x="0px" y="0px"
@@ -337,7 +135,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "AR",countryName: "Argentina",currency: "ARS",symbol: "AR$",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Armenia", iso2: "AM" as CountryCode, dial: 374, format: ".. ......", flag: `
 
 <svg  x="0px" y="0px"
@@ -350,7 +148,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "AM",countryName: "Armenia",currency: "AMD",symbol: "AMD",dateFormat: "undefined",numericCode: undefined}},
 {name: "Aruba", iso2: "AW" as CountryCode, dial: 297, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -371,7 +169,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "AW",countryName: "Aruba",currency: "AWG",symbol: "AWG",dateFormat: "undefined",numericCode: undefined}},
 {name: "Australia", iso2: "AU" as CountryCode, dial: 61, format: "(..) .... ....", flag: `
 
 <svg  x="0px" y="0px"
@@ -410,7 +208,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "AU",countryName: "Australia",currency: "AUD",symbol: "$",dateFormat: "d/MM/yyyy",numericCode: undefined}},
 {name: "Austria", iso2: "AT" as CountryCode, dial: 43, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -424,7 +222,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "AT",countryName: "Austria",currency: "EUR",symbol: "€",dateFormat: "dd.MM.yyyy",numericCode: undefined}},
 {name: "Azerbaijan", iso2: "AZ" as CountryCode, dial: 994, format: "(..) ... .. ..", flag: `
 
 <svg  x="0px" y="0px"
@@ -444,7 +242,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "AZ",countryName: "Azerbaijan",currency: "AZN",symbol: "man.",dateFormat: "undefined",numericCode: undefined}},
 {name: "Bahamas", iso2: "BS" as CountryCode, dial: 1242, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -461,7 +259,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "BS",countryName: "Bahamas",currency: "BSD",symbol: "BSD",dateFormat: "undefined",numericCode: undefined}},
 {name: "Bahrain", iso2: "BH" as CountryCode, dial: 973, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -474,7 +272,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "BH",countryName: "Bahrain",currency: "BHD",symbol: "BD",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Bangladesh", iso2: "BD" as CountryCode, dial: 880, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -485,7 +283,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "BD",countryName: "Bangladesh",currency: "BDT",symbol: "Tk",dateFormat: "undefined",numericCode: undefined}},
 {name: "Barbados", iso2: "BB" as CountryCode, dial: 1246, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -504,7 +302,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "BB",countryName: "Barbados",currency: "BBD",symbol: "BBD",dateFormat: "undefined",numericCode: undefined}},
 {name: "Belarus", iso2: "BY" as CountryCode, dial: 375, format: "(..) ... .. ..", flag: `
 
 <svg  x="0px" y="0px"
@@ -528,7 +326,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "BY",countryName: "Belarus",currency: "BYN",symbol: "BYN",dateFormat: "d.M.yyyy",numericCode: undefined}},
 {name: "Belgium", iso2: "BE" as CountryCode, dial: 32, format: "... .. .. ..", flag: `
 
 <svg  x="0px" y="0px"
@@ -541,7 +339,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "BE",countryName: "Belgium",currency: "EUR",symbol: "€",dateFormat: "d/MM/yyyy",numericCode: undefined}},
 {name: "Belize", iso2: "BZ" as CountryCode, dial: 501, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -564,7 +362,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "BZ",countryName: "Belize",currency: "BZD",symbol: "BZ$",dateFormat: "undefined",numericCode: undefined}},
 {name: "Benin", iso2: "BJ" as CountryCode, dial: 229, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -577,7 +375,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "BJ",countryName: "Benin",currency: "XOF",symbol: "CFA",dateFormat: "undefined",numericCode: undefined}},
 {name: "Bhutan", iso2: "BT" as CountryCode, dial: 975, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -601,7 +399,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "BT",countryName: "Bhutan",currency: "BTN",symbol: "BTN",dateFormat: "undefined",numericCode: undefined}},
 {name: "Bolivia", iso2: "BO" as CountryCode, dial: 591, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -614,7 +412,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "BO",countryName: "Bolivia",currency: "BOB",symbol: "Bs",dateFormat: "dd-MM-yyyy",numericCode: undefined}},
 {name: "Bosnia and Herzegovina", iso2: "BA" as CountryCode, dial: 387, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -638,7 +436,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "BA",countryName: "Bosnia and Herzegovina",currency: "BAM",symbol: "KM",dateFormat: "yyyy-MM-dd",numericCode: undefined}},
 {name: "Botswana", iso2: "BW" as CountryCode, dial: 267, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -657,7 +455,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "BW",countryName: "Botswana",currency: "BWP",symbol: "BWP",dateFormat: "undefined",numericCode: undefined}},
 {name: "Brazil", iso2: "BR" as CountryCode, dial: 55, format: "(..) .........", flag: `
 
 <svg  x="0px" y="0px"
@@ -675,7 +473,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "BR",countryName: "Brazil",currency: "BRL",symbol: "R$",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "British Indian Ocean Territory", iso2: "IO" as CountryCode, dial: 246, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -767,7 +565,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "IO",countryName: "British Indian Ocean Territory",currency: "USD",symbol: "$",dateFormat: "undefined",numericCode: undefined}},
 {name: "Brunei", iso2: "BN" as CountryCode, dial: 673, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -795,7 +593,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "BN",countryName: "Brunei",currency: "BND",symbol: "BN$",dateFormat: "undefined",numericCode: undefined}},
 {name: "Bulgaria", iso2: "BG" as CountryCode, dial: 359, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -808,7 +606,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "BG",countryName: "Bulgaria",currency: "BGN",symbol: "BGN",dateFormat: "yyyy-M-d",numericCode: undefined}},
 {name: "Burkina Faso", iso2: "BF" as CountryCode, dial: 226, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -821,7 +619,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "BF",countryName: "Burkina Faso",currency: "XOF",symbol: "CFA",dateFormat: "undefined",numericCode: undefined}},
 {name: "Burundi", iso2: "BI" as CountryCode, dial: 257, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -847,7 +645,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "BI",countryName: "Burundi",currency: "BIF",symbol: "FBu",dateFormat: "undefined",numericCode: undefined}},
 {name: "Cambodia", iso2: "KH" as CountryCode, dial: 855, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -865,7 +663,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "KH",countryName: "Cambodia",currency: "KHR",symbol: "KHR",dateFormat: "undefined",numericCode: undefined}},
 {name: "Cameroon", iso2: "CM" as CountryCode, dial: 237, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -880,7 +678,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "CM",countryName: "Cameroon",currency: "XAF",symbol: "FCFA",dateFormat: "undefined",numericCode: undefined}},
 {name: "Canada", iso2: "CA" as CountryCode, dial: 1, format: "(...) ...-....", flag: `
 
 <svg  x="0px" y="0px"
@@ -896,7 +694,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "CA",countryName: "Canada",currency: "CAD",symbol: "CA$",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Cape Verde", iso2: "CV" as CountryCode, dial: 238, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -934,7 +732,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "CV",countryName: "Cape Verde",currency: "CVE",symbol: "CV$",dateFormat: "undefined",numericCode: undefined}},
 {name: "Central African Republic", iso2: "CF" as CountryCode, dial: 236, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -960,7 +758,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "CF",countryName: "Central African Republic",currency: "XAF",symbol: "FCFA",dateFormat: "undefined",numericCode: undefined}},
 {name: "Chad", iso2: "TD" as CountryCode, dial: 235, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -973,7 +771,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "TD",countryName: "Chad",currency: "XAF",symbol: "FCFA",dateFormat: "undefined",numericCode: undefined}},
 {name: "Chile", iso2: "CL" as CountryCode, dial: 56, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -987,7 +785,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "CL",countryName: "Chile",currency: "CLP",symbol: "CL$",dateFormat: "dd-MM-yyyy",numericCode: undefined}},
 {name: "China", iso2: "CN" as CountryCode, dial: 86, format: "..-.........", flag: `<?xml version="1.0" encoding="utf-8"?>
 
 <svg  x="0px" y="0px"
@@ -1010,7 +808,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 		213,266.3 237.9,276.4 	"/>
 </g>
 </svg>
-`},
+`, currency: {iso: "CN",countryName: "China",currency: "CNY",symbol: "CN¥",dateFormat: "yyyy-M-d",numericCode: undefined}},
 {name: "Colombia", iso2: "CO" as CountryCode, dial: 57, format: "... ... ....", flag: `
 
 <svg  x="0px" y="0px"
@@ -1023,7 +821,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "CO",countryName: "Colombia",currency: "COP",symbol: "CO$",dateFormat: "d/MM/yyyy",numericCode: undefined}},
 {name: "Comoros", iso2: "KM" as CountryCode, dial: 269, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -1053,7 +851,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "KM",countryName: "Comoros",currency: "KMF",symbol: "CF",dateFormat: "undefined",numericCode: undefined}},
 {name: "Congo", iso2: "CD" as CountryCode, dial: 243, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -1068,7 +866,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "CD",countryName: "Democratic Republic of the Congo",currency: "CDF",symbol: "CDF",dateFormat: "undefined",numericCode: undefined}},
 {name: "Congo", iso2: "CG" as CountryCode, dial: 242, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -1083,7 +881,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "CG",countryName: "Republic of the Congo",currency: "XAF",symbol: "FCFA",dateFormat: "undefined",numericCode: undefined}},
 {name: "Costa Rica", iso2: "CR" as CountryCode, dial: 506, format: "....-....", flag: `
 
 <svg  x="0px" y="0px"
@@ -1098,7 +896,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "CR",countryName: "Costa Rica",currency: "CRC",symbol: "₡",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Cote Ivoire", iso2: "CI" as CountryCode, dial: 225, format: ".. .. .. ..", flag: `
 
 <svg  x="0px" y="0px"
@@ -1111,7 +909,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "CI",countryName: "Ivory Coast",currency: "XOF",symbol: "CFA",dateFormat: "undefined",numericCode: undefined}},
 {name: "Croatia", iso2: "HR" as CountryCode, dial: 385, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -1150,7 +948,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "HR",countryName: "Croatia",currency: "EUR",symbol: "€",dateFormat: "dd.MM.yyyy.",numericCode: undefined}},
 {name: "Cuba", iso2: "CU" as CountryCode, dial: 53, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -1173,7 +971,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "CU",countryName: "Cuba",currency: "CUP",symbol: "CUP",dateFormat: "undefined",numericCode: undefined}},
 {name: "Curacao", iso2: "CW" as CountryCode, dial: 599, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -1192,7 +990,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "CW",countryName: "Curacao",currency: "ANG",symbol: "ANG",dateFormat: "undefined",numericCode: undefined}},
 {name: "Cyprus", iso2: "CY" as CountryCode, dial: 357, format: ".. ......", flag: `
 
 <svg  x="0px" y="0px"
@@ -1209,7 +1007,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "CY",countryName: "Cyprus",currency: "EUR",symbol: "€",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Czech Republic", iso2: "CZ" as CountryCode, dial: 420, format: "... ... ...", flag: `
 
 <svg  x="0px" y="0px"
@@ -1223,7 +1021,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "CZ",countryName: "Czech Republic",currency: "CZK",symbol: "Kč",dateFormat: "d.M.yyyy",numericCode: undefined}},
 {name: "Denmark", iso2: "DK" as CountryCode, dial: 45, format: ".. .. .. ..", flag: `
 
 <svg  x="0px" y="0px"
@@ -1241,7 +1039,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "DK",countryName: "Denmark",currency: "DKK",symbol: "Dkr",dateFormat: "dd-MM-yyyy",numericCode: undefined}},
 {name: "Djibouti", iso2: "DJ" as CountryCode, dial: 253, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -1258,7 +1056,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "DJ",countryName: "Djibouti",currency: "DJF",symbol: "Fdj",dateFormat: "undefined",numericCode: undefined}},
 {name: "Dominica", iso2: "DM" as CountryCode, dial: 1767, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -1312,7 +1110,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "DM",countryName: "Dominica",currency: "XCD",symbol: "XCD",dateFormat: "undefined",numericCode: undefined}},
 {name: "Dominican Republic", iso2: "DO" as CountryCode, dial: 1, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -1331,7 +1129,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "DO",countryName: "Dominican Republic",currency: "DOP",symbol: "RD$",dateFormat: "MM/dd/yyyy",numericCode: undefined}},
 {name: "Ecuador", iso2: "EC" as CountryCode, dial: 593, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -1351,7 +1149,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "EC",countryName: "Ecuador",currency: "USD",symbol: "$",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Egypt", iso2: "EG" as CountryCode, dial: 20, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -1367,7 +1165,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "EG",countryName: "Egypt",currency: "EGP",symbol: "EGP",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "El Salvador", iso2: "SV" as CountryCode, dial: 503, format: "....-....", flag: `
 
 <svg  x="0px" y="0px"
@@ -1387,7 +1185,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "SV",countryName: "El Salvador",currency: "USD",symbol: "$",dateFormat: "MM-dd-yyyy",numericCode: undefined}},
 {name: "Equatorial Guinea", iso2: "GQ" as CountryCode, dial: 240, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -1409,7 +1207,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "GQ",countryName: "Equatorial Guinea",currency: "XAF",symbol: "FCFA",dateFormat: "undefined",numericCode: undefined}},
 {name: "Eritrea", iso2: "ER" as CountryCode, dial: 291, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -1429,7 +1227,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "ER",countryName: "Eritrea",currency: "ERN",symbol: "Nfk",dateFormat: "undefined",numericCode: undefined}},
 {name: "Estonia", iso2: "EE" as CountryCode, dial: 372, format: ".... ......", flag: `
 
 <svg  x="0px" y="0px"
@@ -1442,7 +1240,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "EE",countryName: "Estonia",currency: "EUR",symbol: "€",dateFormat: "d.MM.yyyy",numericCode: undefined}},
 {name: "Ethiopia", iso2: "ET" as CountryCode, dial: 251, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -1463,7 +1261,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "ET",countryName: "Ethiopia",currency: "ETB",symbol: "Br",dateFormat: "undefined",numericCode: undefined}},
 {name: "Fiji", iso2: "FJ" as CountryCode, dial: 679, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -1492,7 +1290,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "FJ",countryName: "Fiji",currency: "FJD",symbol: "FJD",dateFormat: "undefined",numericCode: undefined}},
 {name: "Finland", iso2: "FI" as CountryCode, dial: 358, format: ".. ... .. ..", flag: `
 
 <svg  x="0px" y="0px"
@@ -1505,7 +1303,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "FI",countryName: "Finland",currency: "EUR",symbol: "€",dateFormat: "d.M.yyyy",numericCode: undefined}},
 {name: "France", iso2: "FR" as CountryCode, dial: 33, format: ". .. .. .. ..", flag: `
 
 <svg  x="0px" y="0px"
@@ -1517,7 +1315,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "FR",countryName: "France",currency: "EUR",symbol: "€",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "French Polynesia", iso2: "PF" as CountryCode, dial: 689, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -1538,7 +1336,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "PF",countryName: "French Polynesia",currency: "XPF",symbol: "XPF",dateFormat: "undefined",numericCode: undefined}},
 {name: "Gabon", iso2: "GA" as CountryCode, dial: 241, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -1551,7 +1349,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "GA",countryName: "Gabon",currency: "XAF",symbol: "FCFA",dateFormat: "undefined",numericCode: undefined}},
 {name: "Gambia", iso2: "GM" as CountryCode, dial: 220, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -1565,7 +1363,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "GM",countryName: "Gambia",currency: "GMD",symbol: "GMD",dateFormat: "undefined",numericCode: undefined}},
 {name: "Georgia", iso2: "GE" as CountryCode, dial: 995, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -1588,7 +1386,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "GE",countryName: "Georgia",currency: "GEL",symbol: "GEL",dateFormat: "undefined",numericCode: undefined}},
 {name: "Germany", iso2: "DE" as CountryCode, dial: 49, format: ".... ........", flag: `
 
 <svg  x="0px" y="0px"
@@ -1602,7 +1400,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "DE",countryName: "Germany",currency: "EUR",symbol: "€",dateFormat: "dd.MM.yyyy",numericCode: undefined}},
 {name: "Ghana", iso2: "GH" as CountryCode, dial: 233, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -1617,7 +1415,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "GH",countryName: "Ghana",currency: "GHS",symbol: "GH₵",dateFormat: "undefined",numericCode: undefined}},
 {name: "Greece", iso2: "GR" as CountryCode, dial: 30, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -1636,7 +1434,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "GR",countryName: "Greece",currency: "EUR",symbol: "€",dateFormat: "d/M/yyyy",numericCode: undefined}},
 {name: "Grenada", iso2: "GD" as CountryCode, dial: 1473, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -1681,7 +1479,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "GD",countryName: "Grenada",currency: "XCD",symbol: "XCD",dateFormat: "undefined",numericCode: undefined}},
 {name: "Guam", iso2: "GU" as CountryCode, dial: 1671, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -1707,7 +1505,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "GU",countryName: "Guam",currency: "USD",symbol: "$",dateFormat: "undefined",numericCode: undefined}},
 {name: "Guatemala", iso2: "GT" as CountryCode, dial: 502, format: "....-....", flag: `
 
 <svg  x="0px" y="0px"
@@ -1728,7 +1526,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "GT",countryName: "Guatemala",currency: "GTQ",symbol: "GTQ",dateFormat: "d/MM/yyyy",numericCode: undefined}},
 {name: "Guinea", iso2: "GN" as CountryCode, dial: 224, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -1741,7 +1539,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "GN",countryName: "Guinea",currency: "GNF",symbol: "FG",dateFormat: "undefined",numericCode: undefined}},
 {name: "Guinea-Bissau", iso2: "GW" as CountryCode, dial: 245, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -1760,7 +1558,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "GW",countryName: "Guinea-Bissau",currency: "XOF",symbol: "CFA",dateFormat: "undefined",numericCode: undefined}},
 {name: "Guyana", iso2: "GY" as CountryCode, dial: 592, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -1781,7 +1579,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "GY",countryName: "Guyana",currency: "GYD",symbol: "GYD",dateFormat: "undefined",numericCode: undefined}},
 {name: "Haiti", iso2: "HT" as CountryCode, dial: 509, format: "....-....", flag: `
 
 <svg  x="0px" y="0px"
@@ -1798,7 +1596,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "HT",countryName: "Haiti",currency: "HTG",symbol: "HTG",dateFormat: "undefined",numericCode: undefined}},
 {name: "Honduras", iso2: "HN" as CountryCode, dial: 504, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -1821,7 +1619,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "HN",countryName: "Honduras",currency: "HNL",symbol: "HNL",dateFormat: "MM-dd-yyyy",numericCode: undefined}},
 {name: "Hong Kong", iso2: "HK" as CountryCode, dial: 852, format: ".... ....", flag: `
 
 <svg  x="0px" y="0px"
@@ -1844,7 +1642,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "HK",countryName: "Hong Kong",currency: "HKD",symbol: "HK$",dateFormat: "yyyy年M月d日",numericCode: undefined}},
 {name: "Hungary", iso2: "HU" as CountryCode, dial: 36, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -1857,7 +1655,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "HU",countryName: "Hungary",currency: "HUF",symbol: "Ft",dateFormat: "yyyy.MM.dd.",numericCode: undefined}},
 {name: "Iceland", iso2: "IS" as CountryCode, dial: 354, format: "... ....", flag: `
 
 <svg  x="0px" y="0px"
@@ -1878,7 +1676,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "IS",countryName: "Iceland",currency: "ISK",symbol: "Ikr",dateFormat: "d.M.yyyy",numericCode: undefined}},
 {name: "India", iso2: "IN" as CountryCode, dial: 91, format: ".....-.....", flag: `
 
 <svg  x="0px" y="0px"
@@ -1894,7 +1692,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "IN",countryName: "India",currency: "INR",symbol: "₹",dateFormat: "d/M/yyyy",numericCode: undefined}},
 {name: "Indonesia", iso2: "ID" as CountryCode, dial: 62, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -1905,7 +1703,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "ID",countryName: "Indonesia",currency: "IDR",symbol: "Rp",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Iran", iso2: "IR" as CountryCode, dial: 98, format: "... ... ....", flag: `
 
 <svg  x="0px" y="0px"
@@ -1925,7 +1723,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "IR",countryName: "Iran",currency: "IRR",symbol: "IRR",dateFormat: "undefined",numericCode: undefined}},
 {name: "Iraq", iso2: "IQ" as CountryCode, dial: 964, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -1946,7 +1744,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "IQ",countryName: "Iraq",currency: "IQD",symbol: "IQD",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Ireland", iso2: "IE" as CountryCode, dial: 353, format: ".. .......", flag: `
 
 <svg  x="0px" y="0px"
@@ -1958,7 +1756,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "IE",countryName: "Ireland",currency: "EUR",symbol: "€",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Israel", iso2: "IL" as CountryCode, dial: 972, format: "... ... ....", flag: `
 
 <svg  x="0px" y="0px"
@@ -1978,7 +1776,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "IL",countryName: "Israel",currency: "ILS",symbol: "₪",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Italy", iso2: "IT" as CountryCode, dial: 39, format: "... .......", flag: `
 
 <svg  x="0px" y="0px"
@@ -1990,7 +1788,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "IT",countryName: "Italy",currency: "EUR",symbol: "€",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Jamaica", iso2: "JM" as CountryCode, dial: 1876, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2006,7 +1804,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "JM",countryName: "Jamaica",currency: "JMD",symbol: "J$",dateFormat: "undefined",numericCode: undefined}},
 {name: "Japan", iso2: "JP" as CountryCode, dial: 81, format: ".. .... ....", flag: `
 
 <svg  x="0px" y="0px"
@@ -2017,7 +1815,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "JP",countryName: "Japan",currency: "JPY",symbol: "¥",dateFormat: "H24.MM.dd",numericCode: undefined}},
 {name: "Jordan", iso2: "JO" as CountryCode, dial: 962, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2035,7 +1833,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "JO",countryName: "Jordan",currency: "JOD",symbol: "JD",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Kazakhstan", iso2: "KZ" as CountryCode, dial: 7, format: "... ...-..-..", flag: `
 
 <svg  x="0px" y="0px"
@@ -2053,7 +1851,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "KZ",countryName: "Kazakhstan",currency: "KZT",symbol: "KZT",dateFormat: "undefined",numericCode: undefined}},
 {name: "Kenya", iso2: "KE" as CountryCode, dial: 254, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2080,7 +1878,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "KE",countryName: "Kenya",currency: "KES",symbol: "Ksh",dateFormat: "undefined",numericCode: undefined}},
 {name: "Kiribati", iso2: "KI" as CountryCode, dial: 686, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2136,7 +1934,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "KI",countryName: "Kiribati",currency: "AUD",symbol: "AU$",dateFormat: "undefined",numericCode: undefined}},
 {name: "Kosovo", iso2: "XK" as CountryCode, dial: 383, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2163,7 +1961,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "XK",countryName: "Kosovo",currency: "EUR",symbol: "€",dateFormat: "undefined",numericCode: undefined}},
 {name: "Kuwait", iso2: "KW" as CountryCode, dial: 965, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2177,7 +1975,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "KW",countryName: "Kuwait",currency: "KWD",symbol: "KD",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Kyrgyzstan", iso2: "KG" as CountryCode, dial: 996, format: "... ... ...", flag: `
 
 <svg  x="0px" y="0px"
@@ -2200,7 +1998,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "KG",countryName: "Kyrgyzstan",currency: "KGS",symbol: "KGS",dateFormat: "undefined",numericCode: undefined}},
 {name: "Laos", iso2: "LA" as CountryCode, dial: 856, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2218,7 +2016,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "LA",countryName: "Laos",currency: "LAK",symbol: "LAK",dateFormat: "undefined",numericCode: undefined}},
 {name: "Latvia", iso2: "LV" as CountryCode, dial: 371, format: ".. ... ...", flag: `
 
 <svg  x="0px" y="0px"
@@ -2231,7 +2029,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "LV",countryName: "Latvia",currency: "EUR",symbol: "€",dateFormat: "yyyy.d.M",numericCode: undefined}},
 {name: "Lebanon", iso2: "LB" as CountryCode, dial: 961, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2247,7 +2045,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "LB",countryName: "Lebanon",currency: "LBP",symbol: "LB£",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Lesotho", iso2: "LS" as CountryCode, dial: 266, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2262,7 +2060,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "LS",countryName: "Lesotho",currency: "LSL",symbol: "LSL",dateFormat: "undefined",numericCode: undefined}},
 {name: "Liberia", iso2: "LR" as CountryCode, dial: 231, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2297,7 +2095,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "LR",countryName: "Liberia",currency: "LRD",symbol: "LRD",dateFormat: "undefined",numericCode: undefined}},
 {name: "Libya", iso2: "LY" as CountryCode, dial: 218, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2317,7 +2115,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "LY",countryName: "Libya",currency: "LYD",symbol: "LD",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Liechtenstein", iso2: "LI" as CountryCode, dial: 423, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2332,7 +2130,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "LI",countryName: "Liechtenstein",currency: "CHF",symbol: "CHF",dateFormat: "undefined",numericCode: undefined}},
 {name: "Lithuania", iso2: "LT" as CountryCode, dial: 370, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2345,7 +2143,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "LT",countryName: "Lithuania",currency: "EUR",symbol: "€",dateFormat: "yyyy.M.d",numericCode: undefined}},
 {name: "Luxembourg", iso2: "LU" as CountryCode, dial: 352, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2357,7 +2155,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "LU",countryName: "Luxembourg",currency: "EUR",symbol: "€",dateFormat: "dd.MM.yyyy",numericCode: undefined}},
 {name: "Macedonia", iso2: "MK" as CountryCode, dial: 389, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2379,7 +2177,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "MK",countryName: "Macedonia",currency: "MKD",symbol: "MKD",dateFormat: "d.M.yyyy",numericCode: undefined}},
 {name: "Madagascar", iso2: "MG" as CountryCode, dial: 261, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2393,7 +2191,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "MG",countryName: "Madagascar",currency: "MGA",symbol: "MGA",dateFormat: "undefined",numericCode: undefined}},
 {name: "Malawi", iso2: "MW" as CountryCode, dial: 265, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2408,7 +2206,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "MW",countryName: "Malawi",currency: "MWK",symbol: "MWK",dateFormat: "undefined",numericCode: undefined}},
 {name: "Malaysia", iso2: "MY" as CountryCode, dial: 60, format: "..-....-....", flag: `
 
 <svg  x="0px" y="0px"
@@ -2433,7 +2231,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "MY",countryName: "Malaysia",currency: "MYR",symbol: "RM",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Maldives", iso2: "MV" as CountryCode, dial: 960, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2447,7 +2245,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "MV",countryName: "Maldives",currency: "MVR",symbol: "MVR",dateFormat: "undefined",numericCode: undefined}},
 {name: "Mali", iso2: "ML" as CountryCode, dial: 223, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2460,7 +2258,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "ML",countryName: "Mali",currency: "XOF",symbol: "CFA",dateFormat: "undefined",numericCode: undefined}},
 {name: "Malta", iso2: "MT" as CountryCode, dial: 356, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2473,7 +2271,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "MT",countryName: "Malta",currency: "EUR",symbol: "€",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Marshall Islands", iso2: "MH" as CountryCode, dial: 692, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2491,7 +2289,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "MH",countryName: "Marshall Islands",currency: "USD",symbol: "$",dateFormat: "undefined",numericCode: undefined}},
 {name: "Martinique", iso2: "MQ" as CountryCode, dial: 596, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2531,7 +2329,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "MQ",countryName: "Martinique",currency: "EUR",symbol: "€",dateFormat: "undefined",numericCode: undefined}},
 {name: "Mauritania", iso2: "MR" as CountryCode, dial: 222, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2547,7 +2345,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "MR",countryName: "Mauritania",currency: "MRU",symbol: "MRU",dateFormat: "undefined",numericCode: undefined}},
 {name: "Mauritius", iso2: "MU" as CountryCode, dial: 230, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2563,7 +2361,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "MU",countryName: "Mauritius",currency: "MUR",symbol: "MURs",dateFormat: "undefined",numericCode: undefined}},
 {name: "Mexico", iso2: "MX" as CountryCode, dial: 52, format: "... ... ....", flag: `
 
 <svg  x="0px" y="0px"
@@ -2583,7 +2381,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "MX",countryName: "Mexico",currency: "MXN",symbol: "MX$",dateFormat: "d/MM/yyyy",numericCode: undefined}},
 {name: "Micronesia", iso2: "FM" as CountryCode, dial: 691, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2602,7 +2400,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "FM",countryName: "Micronesia",currency: "USD",symbol: "$",dateFormat: "undefined",numericCode: undefined}},
 {name: "Moldova", iso2: "MD" as CountryCode, dial: 373, format: "(..) ..-..-..", flag: `
 
 <svg  x="0px" y="0px"
@@ -2622,7 +2420,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "MD",countryName: "Moldova",currency: "MDL",symbol: "MDL",dateFormat: "undefined",numericCode: undefined}},
 {name: "Monaco", iso2: "MC" as CountryCode, dial: 377, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2633,7 +2431,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "MC",countryName: "Monaco",currency: "EUR",symbol: "€",dateFormat: "undefined",numericCode: undefined}},
 {name: "Mongolia", iso2: "MN" as CountryCode, dial: 976, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2656,7 +2454,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "MN",countryName: "Mongolia",currency: "MNT",symbol: "MNT",dateFormat: "undefined",numericCode: undefined}},
 {name: "Montenegro", iso2: "ME" as CountryCode, dial: 382, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2682,7 +2480,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "ME",countryName: "Montenegro",currency: "EUR",symbol: "€",dateFormat: "d.M.yyyy.",numericCode: undefined}},
 {name: "Morocco", iso2: "MA" as CountryCode, dial: 212, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2697,7 +2495,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "MA",countryName: "Morocco",currency: "MAD",symbol: "MAD",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Mozambique", iso2: "MZ" as CountryCode, dial: 258, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2720,7 +2518,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "MZ",countryName: "Mozambique",currency: "MZN",symbol: "MTn",dateFormat: "undefined",numericCode: undefined}},
 {name: "Myanmar", iso2: "MM" as CountryCode, dial: 95, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2735,7 +2533,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "MM",countryName: "Myanmar",currency: "MMK",symbol: "MMK",dateFormat: "undefined",numericCode: undefined}},
 {name: "Namibia", iso2: "NA" as CountryCode, dial: 264, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2755,7 +2553,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "NA",countryName: "Namibia",currency: "NAD",symbol: "N$",dateFormat: "undefined",numericCode: undefined}},
 {name: "Nauru", iso2: "NR" as CountryCode, dial: 674, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2773,7 +2571,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "NR",countryName: "Nauru",currency: "AUD",symbol: "AU$",dateFormat: "undefined",numericCode: undefined}},
 {name: "Nepal", iso2: "NP" as CountryCode, dial: 977, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2798,7 +2596,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "NP",countryName: "Nepal",currency: "NPR",symbol: "NPRs",dateFormat: "undefined",numericCode: undefined}},
 {name: "Netherlands", iso2: "NL" as CountryCode, dial: 31, format: ".. ........", flag: `
 
 <svg  x="0px" y="0px"
@@ -2810,7 +2608,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "NL",countryName: "Netherlands",currency: "EUR",symbol: "€",dateFormat: "d-M-yyyy",numericCode: undefined}},
 {name: "New Zealand", iso2: "NZ" as CountryCode, dial: 64, format: "...-...-....", flag: `
 
 <svg  x="0px" y="0px"
@@ -2839,7 +2637,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "NZ",countryName: "New Zealand",currency: "NZD",symbol: "NZ$",dateFormat: "d/MM/yyyy",numericCode: undefined}},
 {name: "Nicaragua", iso2: "NI" as CountryCode, dial: 505, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2859,7 +2657,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "NI",countryName: "Nicaragua",currency: "NIO",symbol: "C$",dateFormat: "MM-dd-yyyy",numericCode: undefined}},
 {name: "Niger", iso2: "NE" as CountryCode, dial: 227, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2874,7 +2672,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "NE",countryName: "Niger",currency: "XOF",symbol: "CFA",dateFormat: "undefined",numericCode: undefined}},
 {name: "Nigeria", iso2: "NG" as CountryCode, dial: 234, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2887,7 +2685,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "NG",countryName: "Nigeria",currency: "NGN",symbol: "₦",dateFormat: "undefined",numericCode: undefined}},
 {name: "North Korea", iso2: "KP" as CountryCode, dial: 850, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2906,7 +2704,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "KP",countryName: "North Korea",currency: "KPW",symbol: "KPW",dateFormat: "undefined",numericCode: undefined}},
 {name: "Norway", iso2: "NO" as CountryCode, dial: 47, format: "... .. ...", flag: `
 
 <svg  x="0px" y="0px"
@@ -2927,7 +2725,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "NO",countryName: "Norway",currency: "NOK",symbol: "Nkr",dateFormat: "dd.MM.yyyy",numericCode: undefined}},
 {name: "Oman", iso2: "OM" as CountryCode, dial: 968, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2946,7 +2744,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "OM",countryName: "Oman",currency: "OMR",symbol: "OMR",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Pakistan", iso2: "PK" as CountryCode, dial: 92, format: "...-.......", flag: `
 
 <svg  x="0px" y="0px"
@@ -2968,7 +2766,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "PK",countryName: "Pakistan",currency: "PKR",symbol: "PKRs",dateFormat: "undefined",numericCode: undefined}},
 {name: "Palau", iso2: "PW" as CountryCode, dial: 680, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2979,7 +2777,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "PW",countryName: "Palau",currency: "USD",symbol: "$",dateFormat: "undefined",numericCode: undefined}},
 {name: "Palestine", iso2: "PS" as CountryCode, dial: 970, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -2994,7 +2792,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "PS",countryName: "Palestinian Territory",currency: "ILS",symbol: "₪",dateFormat: "undefined",numericCode: undefined}},
 {name: "Panama", iso2: "PA" as CountryCode, dial: 507, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3010,7 +2808,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "PA",countryName: "Panama",currency: "PAB",symbol: "B/.",dateFormat: "MM/dd/yyyy",numericCode: undefined}},
 {name: "Papua New Guinea", iso2: "PG" as CountryCode, dial: 675, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3043,7 +2841,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "PG",countryName: "Papua New Guinea",currency: "PGK",symbol: "PGK",dateFormat: "undefined",numericCode: undefined}},
 {name: "Paraguay", iso2: "PY" as CountryCode, dial: 595, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3061,7 +2859,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "PY",countryName: "Paraguay",currency: "PYG",symbol: "₲",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Peru", iso2: "PE" as CountryCode, dial: 51, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3074,7 +2872,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "PE",countryName: "Peru",currency: "PEN",symbol: "S/.",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Philippines", iso2: "PH" as CountryCode, dial: 63, format: ".... .......", flag: `
 
 <svg  x="0px" y="0px"
@@ -3098,7 +2896,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "PH",countryName: "Philippines",currency: "PHP",symbol: "₱",dateFormat: "M/d/yyyy",numericCode: undefined}},
 {name: "Poland", iso2: "PL" as CountryCode, dial: 48, format: "...-...-...", flag: `
 
 <svg  x="0px" y="0px"
@@ -3109,7 +2907,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "PL",countryName: "Poland",currency: "PLN",symbol: "zł",dateFormat: "dd.MM.yyyy",numericCode: undefined}},
 {name: "Portugal", iso2: "PT" as CountryCode, dial: 351, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3127,7 +2925,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "PT",countryName: "Portugal",currency: "EUR",symbol: "€",dateFormat: "dd-MM-yyyy",numericCode: undefined}},
 {name: "Puerto Rico", iso2: "PR" as CountryCode, dial: 1, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3147,7 +2945,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "PR",countryName: "Puerto Rico",currency: "USD",symbol: "$",dateFormat: "MM-dd-yyyy",numericCode: undefined}},
 {name: "Qatar", iso2: "QA" as CountryCode, dial: 974, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3161,7 +2959,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "QA",countryName: "Qatar",currency: "QAR",symbol: "QR",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Romania", iso2: "RO" as CountryCode, dial: 40, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3177,7 +2975,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "RO",countryName: "Romania",currency: "RON",symbol: "RON",dateFormat: "dd.MM.yyyy",numericCode: undefined}},
 {name: "Russia", iso2: "RU" as CountryCode, dial: 7, format: "(...) ...-..-..", flag: `
 
 <svg  x="0px" y="0px"
@@ -3190,7 +2988,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "RU",countryName: "Russia",currency: "RUB",symbol: "RUB",dateFormat: "dd.MM.yyyy",numericCode: undefined}},
 {name: "Rwanda", iso2: "RW" as CountryCode, dial: 250, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3207,7 +3005,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "RW",countryName: "Rwanda",currency: "RWF",symbol: "RWF",dateFormat: "undefined",numericCode: undefined}},
 {name: "Saint Kitts and Nevis", iso2: "KN" as CountryCode, dial: 1869, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3228,7 +3026,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "KN",countryName: "Saint Kitts and Nevis",currency: "XCD",symbol: "XCD",dateFormat: "undefined",numericCode: undefined}},
 {name: "Samoa", iso2: "WS" as CountryCode, dial: 685, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3251,7 +3049,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "WS",countryName: "Samoa",currency: "WST",symbol: "WST",dateFormat: "undefined",numericCode: undefined}},
 {name: "San Marino", iso2: "SM" as CountryCode, dial: 378, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3276,7 +3074,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "SM",countryName: "San Marino",currency: "EUR",symbol: "€",dateFormat: "undefined",numericCode: undefined}},
 {name: "Sao Tome and Principe", iso2: "ST" as CountryCode, dial: 239, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3298,7 +3096,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "ST",countryName: "Sao Tome and Principe",currency: "STD",symbol: "STD",dateFormat: "undefined",numericCode: undefined}},
 {name: "Saudi Arabia", iso2: "SA" as CountryCode, dial: 966, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3321,7 +3119,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "SA",countryName: "Saudi Arabia",currency: "SAR",symbol: "SR",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Senegal", iso2: "SN" as CountryCode, dial: 221, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3338,7 +3136,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "SN",countryName: "Senegal",currency: "XOF",symbol: "CFA",dateFormat: "undefined",numericCode: undefined}},
 {name: "Serbia", iso2: "RS" as CountryCode, dial: 381, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3366,7 +3164,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "RS",countryName: "Serbia",currency: "RSD",symbol: "din.",dateFormat: "d.M.yyyy.",numericCode: undefined}},
 {name: "Seychelles", iso2: "SC" as CountryCode, dial: 248, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3383,7 +3181,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "SC",countryName: "Seychelles",currency: "SCR",symbol: "SCR",dateFormat: "undefined",numericCode: undefined}},
 {name: "Sierra Leone", iso2: "SL" as CountryCode, dial: 232, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3396,7 +3194,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "SL",countryName: "Sierra Leone",currency: "SLL",symbol: "SLL",dateFormat: "undefined",numericCode: undefined}},
 {name: "Singapore", iso2: "SG" as CountryCode, dial: 65, format: "....-....", flag: `
 
 <svg  x="0px" y="0px"
@@ -3421,7 +3219,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "SG",countryName: "Singapore",currency: "SGD",symbol: "S$",dateFormat: "M/d/yyyy",numericCode: undefined}},
 {name: "Slovakia", iso2: "SK" as CountryCode, dial: 421, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3445,7 +3243,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "SK",countryName: "Slovakia",currency: "EUR",symbol: "€",dateFormat: "d.M.yyyy",numericCode: undefined}},
 {name: "Slovenia", iso2: "SI" as CountryCode, dial: 386, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3460,7 +3258,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "SI",countryName: "Slovenia",currency: "EUR",symbol: "€",dateFormat: "d.M.yyyy",numericCode: undefined}},
 {name: "Solomon Islands", iso2: "SB" as CountryCode, dial: 677, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3487,7 +3285,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "SB",countryName: "Solomon Islands",currency: "SBD",symbol: "SBD",dateFormat: "undefined",numericCode: undefined}},
 {name: "Somalia", iso2: "SO" as CountryCode, dial: 252, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3499,7 +3297,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "SO",countryName: "Somalia",currency: "SOS",symbol: "Ssh",dateFormat: "undefined",numericCode: undefined}},
 {name: "South Africa", iso2: "ZA" as CountryCode, dial: 27, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3519,7 +3317,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "ZA",countryName: "South Africa",currency: "ZAR",symbol: "R",dateFormat: "yyyy/MM/dd",numericCode: undefined}},
 {name: "South Korea", iso2: "KR" as CountryCode, dial: 82, format: "... .... ....", flag: `
 
 <svg  x="0px" y="0px"
@@ -3550,7 +3348,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "KR",countryName: "South Korea",currency: "KRW",symbol: "₩",dateFormat: "yyyy. M. d",numericCode: undefined}},
 {name: "South Sudan", iso2: "SS" as CountryCode, dial: 211, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3570,7 +3368,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "SS",countryName: "South Sudan",currency: "SSP",symbol: "SSP",dateFormat: "undefined",numericCode: undefined}},
 {name: "Spain", iso2: "ES" as CountryCode, dial: 34, format: "... ... ...", flag: `
 
 <svg  x="0px" y="0px"
@@ -3584,7 +3382,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "ES",countryName: "Spain",currency: "EUR",symbol: "€",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Sri Lanka", iso2: "LK" as CountryCode, dial: 94, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3606,7 +3404,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "LK",countryName: "Sri Lanka",currency: "LKR",symbol: "SLRs",dateFormat: "undefined",numericCode: undefined}},
 {name: "Sudan", iso2: "SD" as CountryCode, dial: 249, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3621,7 +3419,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "SD",countryName: "Sudan",currency: "SDG",symbol: "SDG",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Suriname", iso2: "SR" as CountryCode, dial: 597, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3641,7 +3439,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "SR",countryName: "Suriname",currency: "SRD",symbol: "SRD",dateFormat: "undefined",numericCode: undefined}},
 {name: "Swaziland", iso2: "SZ" as CountryCode, dial: 268, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3668,7 +3466,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "SZ",countryName: "Swaziland",currency: "SZL",symbol: "SZL",dateFormat: "undefined",numericCode: undefined}},
 {name: "Sweden", iso2: "SE" as CountryCode, dial: 46, format: "(...) ...-...", flag: `
 
 <svg  x="0px" y="0px"
@@ -3686,7 +3484,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "SE",countryName: "Sweden",currency: "SEK",symbol: "Skr",dateFormat: "yyyy-MM-dd",numericCode: undefined}},
 {name: "Switzerland", iso2: "CH" as CountryCode, dial: 41, format: ".. ... .. ..", flag: `
 
 <svg  x="0px" y="0px"
@@ -3698,7 +3496,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "CH",countryName: "Switzerland",currency: "CHF",symbol: "CHF",dateFormat: "dd.MM.yyyy",numericCode: undefined}},
 {name: "Syria", iso2: "SY" as CountryCode, dial: 963, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3715,7 +3513,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "SY",countryName: "Syria",currency: "SYP",symbol: "SY£",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Taiwan", iso2: "TW" as CountryCode, dial: 886, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3733,7 +3531,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "TW",countryName: "Taiwan",currency: "TWD",symbol: "NT$",dateFormat: "yyyy/M/d",numericCode: undefined}},
 {name: "Tajikistan", iso2: "TJ" as CountryCode, dial: 992, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3763,7 +3561,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "TJ",countryName: "Tajikistan",currency: "TJS",symbol: "TJS",dateFormat: "undefined",numericCode: undefined}},
 {name: "Tanzania", iso2: "TZ" as CountryCode, dial: 255, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3779,7 +3577,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "TZ",countryName: "Tanzania",currency: "TZS",symbol: "TSh",dateFormat: "undefined",numericCode: undefined}},
 {name: "Thailand", iso2: "TH" as CountryCode, dial: 66, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3794,7 +3592,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "TH",countryName: "Thailand",currency: "THB",symbol: "฿",dateFormat: "๓/๖/๒๕๕๕",numericCode: undefined}},
 {name: "Togo", iso2: "TG" as CountryCode, dial: 228, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3814,7 +3612,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "TG",countryName: "Togo",currency: "XOF",symbol: "CFA",dateFormat: "undefined",numericCode: undefined}},
 {name: "Tonga", iso2: "TO" as CountryCode, dial: 676, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3829,7 +3627,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "TO",countryName: "Tonga",currency: "TOP",symbol: "T$",dateFormat: "undefined",numericCode: undefined}},
 {name: "Trinidad and Tobago", iso2: "TT" as CountryCode, dial: 1868, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3848,7 +3646,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "TT",countryName: "Trinidad and Tobago",currency: "TTD",symbol: "TT$",dateFormat: "undefined",numericCode: undefined}},
 {name: "Tunisia", iso2: "TN" as CountryCode, dial: 216, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3865,7 +3663,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "TN",countryName: "Tunisia",currency: "TND",symbol: "DT",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Turkey", iso2: "TR" as CountryCode, dial: 90, format: "... ... .. ..", flag: `
 
 <svg  x="0px" y="0px"
@@ -3881,7 +3679,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "TR",countryName: "Turkey",currency: "TRY",symbol: "₺",dateFormat: "dd.MM.yyyy",numericCode: undefined}},
 {name: "Turkmenistan", iso2: "TM" as CountryCode, dial: 993, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3936,7 +3734,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "TM",countryName: "Turkmenistan",currency: "TMT",symbol: "TMT",dateFormat: "undefined",numericCode: undefined}},
 {name: "Tuvalu", iso2: "TV" as CountryCode, dial: 688, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -3979,7 +3777,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "TV",countryName: "Tuvalu",currency: "AUD",symbol: "AU$",dateFormat: "undefined",numericCode: undefined}},
 {name: "Uganda", iso2: "UG" as CountryCode, dial: 256, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -4002,7 +3800,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "UG",countryName: "Uganda",currency: "UGX",symbol: "USh",dateFormat: "undefined",numericCode: undefined}},
 {name: "Ukraine", iso2: "UA" as CountryCode, dial: 380, format: "(..) ... .. ..", flag: `
 
 <svg  x="0px" y="0px"
@@ -4013,7 +3811,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "UA",countryName: "Ukraine",currency: "UAH",symbol: "₴",dateFormat: "dd.MM.yyyy",numericCode: undefined}},
 {name: "United Arab Emirates", iso2: "AE" as CountryCode, dial: 971, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -4027,7 +3825,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "AE",countryName: "United Arab Emirates",currency: "AED",symbol: "AED",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "United Kingdom", iso2: "GB" as CountryCode, dial: 44, format: ".... ......", flag: `
 
 <svg  x="0px" y="0px"
@@ -4060,7 +3858,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "GB",countryName: "United Kingdom",currency: "GBP",symbol: "£",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "United States", iso2: "US" as CountryCode, dial: 1, format: "(...) ...-....", flag: `
 
 <svg  x="0px" y="0px"
@@ -4087,7 +3885,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "US",countryName: "United States",currency: "USD",symbol: "$",dateFormat: "M/d/yyyy",numericCode: undefined}},
 {name: "Uruguay", iso2: "UY" as CountryCode, dial: 598, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -4111,7 +3909,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "UY",countryName: "Uruguay",currency: "UYU",symbol: "$U",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Uzbekistan", iso2: "UZ" as CountryCode, dial: 998, format: ".. ... .. ..", flag: `
 
 <svg  x="0px" y="0px"
@@ -4161,7 +3959,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "UZ",countryName: "Uzbekistan",currency: "UZS",symbol: "UZS",dateFormat: "undefined",numericCode: undefined}},
 {name: "Vanuatu", iso2: "VU" as CountryCode, dial: 678, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -4212,7 +4010,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "VU",countryName: "Vanuatu",currency: "VUV",symbol: "VUV",dateFormat: "undefined",numericCode: undefined}},
 {name: "Vatican City", iso2: "VA" as CountryCode, dial: 39, format: ".. .... ....", flag: `
 
 <svg  x="0px" y="0px"
@@ -4232,7 +4030,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "VA",countryName: "Vatican",currency: "EUR",symbol: "€",dateFormat: "undefined",numericCode: undefined}},
 {name: "Venezuela", iso2: "VE" as CountryCode, dial: 58, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -4263,7 +4061,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "VE",countryName: "Venezuela",currency: "VEF",symbol: "Bs.F.",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Vietnam", iso2: "VN" as CountryCode, dial: 84, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -4275,7 +4073,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "VN",countryName: "Vietnam",currency: "VND",symbol: "₫",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Yemen", iso2: "YE" as CountryCode, dial: 967, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -4287,7 +4085,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "YE",countryName: "Yemen",currency: "YER",symbol: "YR",dateFormat: "dd/MM/yyyy",numericCode: undefined}},
 {name: "Zambia", iso2: "ZM" as CountryCode, dial: 260, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -4304,7 +4102,7 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`},
+`, currency: {iso: "ZM",countryName: "Zambia",currency: "ZMW",symbol: "ZK",dateFormat: "undefined",numericCode: undefined}},
 {name: "Zimbabwe", iso2: "ZW" as CountryCode, dial: 263, format: "", flag: `
 
 <svg  x="0px" y="0px"
@@ -4337,5 +4135,5 @@ export type CountryWithDialType = {name: string; iso2: CountryCode; dial: number
 
 </g>
 </svg>
-`}
+`, currency: {iso: "ZW",countryName: "Zimbabwe",currency: "ZWL",symbol: "ZWL",dateFormat: "undefined",numericCode: undefined}}
 ];

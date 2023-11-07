@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "types": ["react-native"], // exclude node types to avoid conflicts
     "target": "esnext" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
     "lib": [
       "es2019"
