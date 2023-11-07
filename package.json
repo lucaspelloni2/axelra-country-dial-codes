@@ -1,18 +1,18 @@
 {
   "name": "axelra-country-dial-codes",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "axelra country dial codes.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "rm -rf dist/ && tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "tsc generate-data.ts"
   },
   "author": "lucas pelloni",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^18.11.18",
-    "@types/react-native": "^0.71.0",
+    "@types/node": "^20.8.10",
     "atob": "^2.1.2",
     "i18n-iso-countries": "^7.5.0",
     "prettier": "^2.8.3",

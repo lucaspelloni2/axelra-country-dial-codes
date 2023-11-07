@@ -4,7 +4,7 @@ import * as fs from "fs";
 const isos = rawCountries.map((c) => c[2]) as string[];
 
 const CountryCodes = `const countryCodes = [${isos.map((iso, index) => {
-  return `"${iso}"`;
+  return `"${iso.toUpperCase()}"`;
 })}] as const;`;
 
 const CountryCode = `export type CountryCode = typeof countryCodes[number];`;
@@ -19,7 +19,7 @@ const toPrint = rawCountries.map((c) => {
 
   return {
     name,
-    iso2,
+    iso2: iso2.toUpperCase(),
     dial: c[3],
     flag: flagXML.toString("utf-8"),
     format: c[4]?.toString().length > 1 ? c[4] : null,

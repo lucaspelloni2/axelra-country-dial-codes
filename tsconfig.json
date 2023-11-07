@@ -1,21 +1,23 @@
 {
   "compilerOptions": {
-    "target": "esnext",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
-    "lib": ["es2019"],                                   /* Specify a set of bundled library declaration files that describe the target runtime environment. */
-    "jsx": "react-native",                               /* Specify what JSX code is generated. */
-    "module": "commonjs",                                /* Specify what module code is generated. */
-    "moduleResolution": "node",                          /* Specify how TypeScript looks up a file from a given module specifier. */
+    "types": ["react-native"], // exclude node types to avoid conflicts
+    "target": "esnext" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+    "lib": [
+      "es2019"
+    ] /* Specify a set of bundled library declaration files that describe the target runtime environment. */,
+    "module": "commonjs" /* Specify what module code is generated. */,
+    "moduleResolution": "node" /* Specify how TypeScript looks up a file from a given module specifier. */,
     "declaration": true,
-    "resolveJsonModule": true,                           /* Enable importing .json files */
+    "resolveJsonModule": true /* Enable importing .json files */,
     // "noResolve": true,                                /* Disallow `import`s, `require`s or `<reference>`s from expanding the number of files TypeScript should add to a project. */
 
     /* JavaScript Support */
-    "allowJs": true,                                     /* Allow JavaScript files to be a part of your program. Use the `checkJS` option to get errors from these files. */
+    "allowJs": true /* Allow JavaScript files to be a part of your program. Use the `checkJS` option to get errors from these files. */,
     "outDir": "./dist/",
-    "strict": true,
+    "strict": false,
     "esModuleInterop": true,
     "skipLibCheck": true
   },
   "include": ["src"],
-  "exclude": ["node_modules", "dist"],
+  "exclude": ["node_modules", "dist"]
 }
